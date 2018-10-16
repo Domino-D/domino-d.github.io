@@ -358,7 +358,7 @@
 <p><code>onClick={(item) =&gt; {this.myfunction(item)}}</code></p>
 <p>前面的中括号中就不要写item了，写了会报错，而且不能正确传值。</p>
 <ul>
-<li>在拆分出来的UI组件中，使用此方法，将 this 通过箭头函数特性重新绑定在子组件上面 <code>onClick={(index) =&gt; {this.props.myfunction(index)}}</code> 。父组件中也需要使用方法二进行编写</li>
+<li>在拆分出来的UI组件中，使用此方法，将 this 通过箭头函数特性重新绑定在子组件上面 <code>onClick={() =&gt; {this.props.myfunction(index)}}</code> 。父组件中也需要使用方法二进行编写。这里的 index 不需要箭头函数传递参数，所指的就是子组件中对应项的 index ，加上了反而有时候会报警告。因为此时的 index 表示的是触发事件 e 。</li>
 </ul>
 <h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><p>在组件中的 constructor 函数中使用 bind(this) 来绑定函数的 this 指向。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">  <span class="keyword">super</span>(props)</span><br><span class="line">  <span class="keyword">this</span>.handleClick = <span class="keyword">this</span>.handleClick.bind(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
