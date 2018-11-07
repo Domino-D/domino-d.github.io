@@ -248,7 +248,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/10/git-note/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/10/css-note/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Domino-D">
@@ -267,7 +267,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/10/git-note/" itemprop="url">git-note</a></h1>
+                <a class="post-title-link" href="/2018/10/10/css-note/" itemprop="url">css note</a></h1>
         
 
         <div class="post-meta">
@@ -319,27 +319,109 @@
       
         
           
-            <h2 id="git-add-lt-filename-extension-gt"><a href="#git-add-lt-filename-extension-gt" class="headerlink" title="git add &lt;filename.extension&gt;"></a>git add &lt;filename.extension&gt;</h2><p>工作区到暂存区的提交</p>
-<h2 id="git-commit-m-““"><a href="#git-commit-m-““" class="headerlink" title="git commit -m ““"></a>git commit -m “<description string="">“</description></h2><p>暂存区到版本仓库的提交，<description string="">由用户自定义描述</description></p>
-<h2 id="git-diff-–-lt-filename-extension-gt"><a href="#git-diff-–-lt-filename-extension-gt" class="headerlink" title="git diff  – &lt;filename.extension&gt;"></a>git diff <stranchname ||="" null=""> – &lt;filename.extension&gt;</stranchname></h2><p>比较分支下某个文件的差异，文件名称需要标明扩展名</p>
-<h2 id="git-status"><a href="#git-status" class="headerlink" title="git status"></a>git status</h2><p>展示工作区和暂存区当前状态</p>
-<h2 id="git-log-–pretty-oneline"><a href="#git-log-–pretty-oneline" class="headerlink" title="git log –pretty=oneline"></a>git log –pretty=oneline</h2><p>单行显示日志，不包含版本回退和删除日志</p>
-<h2 id="git-reflog"><a href="#git-reflog" class="headerlink" title="git reflog"></a>git reflog</h2><p>显示日志，包含所有日志。退出q</p>
-<h2 id="git-reset-–hard"><a href="#git-reset-–hard" class="headerlink" title="git reset –hard __"></a>git reset –hard __</h2><h3 id="git-reset-–hard-HEAD"><a href="#git-reset-–hard-HEAD" class="headerlink" title="git reset –hard HEAD^"></a>git reset –hard HEAD^</h3><h3 id="git-reset-–hard-HEAD-1-100"><a href="#git-reset-–hard-HEAD-1-100" class="headerlink" title="git reset –hard HEAD~[1-100]"></a>git reset –hard HEAD~[1-100]</h3><h3 id="git-reset-–hard-1"><a href="#git-reset-–hard-1" class="headerlink" title="git reset –hard "></a>git reset –hard <hash></hash></h3><p>版本回退或跳转</p>
-<h3 id="git-reset-HEAD-lt-filename-extension-gt"><a href="#git-reset-HEAD-lt-filename-extension-gt" class="headerlink" title="git reset HEAD &lt;filename.extension&gt;"></a>git reset HEAD &lt;filename.extension&gt;</h3><p>回退到提交至暂存区前的状态，文件名称需要标明扩展名</p>
-<h2 id="cat-lt-filename-extension-gt"><a href="#cat-lt-filename-extension-gt" class="headerlink" title="cat &lt;filename.extension&gt;"></a>cat &lt;filename.extension&gt;</h2><p>打开当前文件，展示和编辑源代码</p>
-<h2 id="git-checkout-–-lt-filename-extension-gt"><a href="#git-checkout-–-lt-filename-extension-gt" class="headerlink" title="git checkout – &lt;filename.extension&gt;"></a>git checkout – &lt;filename.extension&gt;</h2><p>放弃暂存区文件状态变动，文件名称需要标明扩展名</p>
-<h2 id="git-checkout-b-branch-name"><a href="#git-checkout-b-branch-name" class="headerlink" title="git checkout -b [branch name]"></a>git checkout -b [branch name]</h2><p>新建分支</p>
-<h2 id="git-checkout-branch-name"><a href="#git-checkout-branch-name" class="headerlink" title="git checkout [branch name]"></a>git checkout [branch name]</h2><p>切换到指定分支</p>
-<h2 id="git-rm-lt-filename-extension-gt"><a href="#git-rm-lt-filename-extension-gt" class="headerlink" title="git rm &lt;filename.extension&gt;"></a>git rm &lt;filename.extension&gt;</h2><p>删除工作区问价，文件名称需要标明扩展名</p>
-<h2 id="git-remote-add-origin-url"><a href="#git-remote-add-origin-url" class="headerlink" title="git remote add origin [url]"></a>git remote add origin [url]</h2><p>添加远程仓库连接</p>
-<h2 id="git-push-origin-local-branch-name-remote-branch-name"><a href="#git-push-origin-local-branch-name-remote-branch-name" class="headerlink" title="git push origin [local branch name] : [remote branch name]"></a>git push origin [local branch name] : [remote branch name]</h2><p>推送本地代码到远程仓库， –force 强制推送</p>
-<h2 id="git-pull-origin-remote-branch-name-local-branch-name"><a href="#git-pull-origin-remote-branch-name-local-branch-name" class="headerlink" title="git pull origin [remote branch name] : [local branch name]"></a>git pull origin [remote branch name] : [local branch name]</h2><p>拉取远程仓库代码到本地</p>
-<h2 id="git-merge-branch-name"><a href="#git-merge-branch-name" class="headerlink" title="git merge [branch name]"></a>git merge [branch name]</h2><p>将指定分支合并到当前所在分支，如有冲突手动解决</p>
-<h2 id="git-stash"><a href="#git-stash" class="headerlink" title="git stash"></a>git stash</h2><p>现场暂存</p>
-<h2 id="git-stash-list"><a href="#git-stash-list" class="headerlink" title="git stash list"></a>git stash list</h2><p>暂存列表</p>
-<h2 id="git-stash-apply-stash-‘num’"><a href="#git-stash-apply-stash-‘num’" class="headerlink" title="git stash apply stash@{‘num’}"></a>git stash apply stash@{‘num’}</h2><p>回复到暂存列表中的某一暂存现场</p>
-<h2 id="git-stash-pop"><a href="#git-stash-pop" class="headerlink" title="git stash pop"></a>git stash pop</h2><p>回到暂存现场，并删除暂存列表内容</p>
+            <h3 id="media"><a href="#media" class="headerlink" title="@media"></a>@media</h3><h4 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h4><pre>
+@media mediatype and|not|only (media feature) {
+    CSS-Code;
+}
+</pre>
+
+<p> <strong>mediatype</strong> 常用参数all ； screen<br> <strong>and|not|only</strong> not不常用；only可以放于mediatype前做限制；and不能前置与media feature相连，同时也用于多个media feature之间相连。<br> <strong>media feature</strong> min-width：定义输出设备中的页面最小可见区域宽度；max-width：定义输出设备中的页面最大可见区域宽度；orientation：portrait|landscape分别表示竖屏、横屏控制。<br> <strong>CSS-Code</strong> 编写对应状态下的css</p>
+<h4 id="用法："><a href="#用法：" class="headerlink" title="用法："></a>用法：</h4><h5 id="打印样式"><a href="#打印样式" class="headerlink" title="打印样式"></a>打印样式</h5><pre>
+@media print {
+color: red;
+}
+</pre>
+
+<h5 id="手机等小屏幕手持设备"><a href="#手机等小屏幕手持设备" class="headerlink" title="手机等小屏幕手持设备"></a>手机等小屏幕手持设备</h5><pre>
+@media screen and (min-width: 320px) and (max-width: 480px){
+body {
+background: yellow;
+}
+}
+</pre>
+
+<h5 id="平板之类的宽度-1024-以下设备"><a href="#平板之类的宽度-1024-以下设备" class="headerlink" title="平板之类的宽度 1024 以下设备"></a>平板之类的宽度 1024 以下设备</h5><pre>
+@media only screen and (min-width: 321px) and (max-width: 1024px) {
+body {
+background: blue;
+}
+}
+</pre>
+
+<h5 id="PC客户端或大屏幕设备-1024px-至更大"><a href="#PC客户端或大屏幕设备-1024px-至更大" class="headerlink" title="PC客户端或大屏幕设备: 1024px 至更大"></a>PC客户端或大屏幕设备: 1024px 至更大</h5><pre>
+@media only screen and (min-width: 1024px) {
+body {
+background: green;
+}
+}
+</pre>
+
+<h5 id="竖屏"><a href="#竖屏" class="headerlink" title="竖屏"></a>竖屏</h5><pre>
+@media screen and (orientation:portrait) and (max-width: 720px) {对应样式}
+</pre>
+
+<h5 id="横屏"><a href="#横屏" class="headerlink" title="横屏"></a>横屏</h5><pre>
+@media screen and (orientation:landscape){对应样式}
+</pre>
+
+<h3 id="import"><a href="#import" class="headerlink" title="@import"></a>@import</h3><p>是css引入的另一种方式，且只能引用css文件。他是在html页面和link标签中css文件加载完成后，再远程加载调用@import xx.css，会引起浏览器回流、重绘和加载，产生http连接，页面加载时长增加，非常不推荐使用。还是用link标签来的实在。</p>
+<h3 id="keyframes"><a href="#keyframes" class="headerlink" title="@keyframes"></a>@keyframes</h3><p>CSS 中 animation属性函数定义</p>
+<h4 id="语法：-1"><a href="#语法：-1" class="headerlink" title="语法："></a>语法：</h4><pre>
+@keyframes animationname {
+keyframes-selector {
+css-styles;
+}
+}
+</pre>
+
+<p> <em>animationname</em> 函数名可自定义<br> <em>keyframes-selector</em> 方式一：0%-100%{css-styles} ；方式二：from{css-styles} to{css-styles}</p>
+<h4 id="用法：-1"><a href="#用法：-1" class="headerlink" title="用法："></a>用法：</h4><h5 id="keyframes-1"><a href="#keyframes-1" class="headerlink" title="@keyframes"></a>@keyframes</h5><p>根据不同浏览器内核，添加相应前缀，如@-webkit-keyframes</p>
+<h5 id="0-100-方式"><a href="#0-100-方式" class="headerlink" title="0%-100%方式"></a>0%-100%方式</h5><pre>
+@keyframes mymove {
+ 0%   {top:0px;}
+ 25%  {top:200px;}
+ 50%  {top:100px;}
+ 75%  {top:200px;}
+ 100% {top:0px;}
+}
+@-webkit-keyframes mymove {
+ 0%   {top:0px;}
+ 25%  {top:200px;}
+ 50%  {top:100px;}
+ 75%  {top:200px;}
+ 100% {top:0px;}
+}
+</pre>
+
+<h5 id="from-css-styles-to-css-styles-方式"><a href="#from-css-styles-to-css-styles-方式" class="headerlink" title="from{css-styles} to{css-styles}方式"></a>from{css-styles} to{css-styles}方式</h5><pre>
+@keyframes mymove {
+ from {top:0px;}
+ to {top:0px;}
+}
+@-webkit-keyframes mymove {
+ from {top:0px;}
+ to {top:0px;}
+}
+</pre>
+
+<h3 id="before和-afterCSS中的伪元素，"><a href="#before和-afterCSS中的伪元素，" class="headerlink" title=":before和:afterCSS中的伪元素，"></a>:before和:afterCSS中的伪元素，</h3><p>可以实现在现有的DOM元素前后增加内容，行内联元素，本身不作为DOM元素，不能用JS进行DOM操作，点击伪元素相当于点击现有元素本身。</p>
+<h4 id="添加内容作用（不赘述）"><a href="#添加内容作用（不赘述）" class="headerlink" title="添加内容作用（不赘述）"></a>添加内容作用（不赘述）</h4><h4 id="清除浮动作用"><a href="#清除浮动作用" class="headerlink" title="清除浮动作用"></a>清除浮动作用</h4><pre>.clearfix:after {
+content: '';
+clear: both;
+}
+</pre>
+
+<p>其中的 ‘.clearfix’ 是类名称，这里只是举例说明<br><br><strong>content属性值允许为空值</strong> 但是 <strong>content属性必须写上</strong> ，否则伪元素不生效，清除浮动也不会生效。<br>相对于空div标签增加清除浮动的方法，伪元素清除浮动的方法，不产生dom节点，这也就不利于搜索和错误检查。在删除清除浮动功能时，空标签容易被发现，需要格外注意检查是不是有伪元素清除浮动作用，避免影响其他元素布局。</p>
+<h3 id="lineheight"><a href="#lineheight" class="headerlink" title="lineheight"></a>lineheight</h3><h4 id="单行文本垂直居中将文本外部第一层容器的height值和该容器的lineheight值定位同一个值。"><a href="#单行文本垂直居中将文本外部第一层容器的height值和该容器的lineheight值定位同一个值。" class="headerlink" title="单行文本垂直居中将文本外部第一层容器的height值和该容器的lineheight值定位同一个值。"></a>单行文本垂直居中将文本外部第一层容器的height值和该容器的lineheight值定位同一个值。</h4><pre>.aclassname {
+display: block;
+height: 100px;
+lineheight: 100px;
+}
+</pre>
+
+<h3 id="display-inline-block-vertical-align：middle"><a href="#display-inline-block-vertical-align：middle" class="headerlink" title="display: inline-block;vertical-align：middle;"></a>display: inline-block;vertical-align：middle;</h3><h4 id="搭配使用实现盒子模型垂直居中"><a href="#搭配使用实现盒子模型垂直居中" class="headerlink" title="搭配使用实现盒子模型垂直居中"></a>搭配使用实现盒子模型垂直居中</h4><p><pre><br>//xxx.html<br>&lt;div class=”outter”&gt;<br>&lt;div class=”ina”&gt;<br>&lt;div class=”inb”&gt;&lt;/div&gt;<br>&lt;/div&gt;<br>&lt;/div&gt;</pre></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//xxx.css</span><br><span class="line"><span class="selector-class">.outter</span> &#123;</span><br><span class="line"><span class="attribute">width</span>: <span class="number">500px</span>;</span><br><span class="line"><span class="attribute">height</span>: <span class="number">500px</span>;</span><br><span class="line"><span class="attribute">background-color</span>: black;</span><br><span class="line"><span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ina</span> &#123;</span><br><span class="line"><span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line"><span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line"><span class="attribute">background-color</span>: red;</span><br><span class="line"><span class="attribute">display</span>: inline-block;</span><br><span class="line"><span class="attribute">vertical-align</span>: middle;</span><br><span class="line"><span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.inb</span> &#123;</span><br><span class="line"><span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line"><span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line"><span class="attribute">display</span>: inline-block;</span><br><span class="line"><span class="attribute">vertical-align</span>: middle;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="CSS-基本初始化"><a href="#CSS-基本初始化" class="headerlink" title="CSS 基本初始化"></a>CSS 基本初始化</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span>, <span class="selector-tag">body</span>, <span class="selector-tag">ul</span>, <span class="selector-tag">li</span>, <span class="selector-tag">p</span>, <span class="selector-tag">h1</span>, <span class="selector-tag">h2</span>, <span class="selector-tag">h3</span>, <span class="selector-tag">form</span>, <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span>, <span class="selector-tag">ol</span> &#123;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">input</span> &#123;<span class="comment">/*默认padding-top和padding-bottom 1px， border 2px*/</span></span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    border： 0；</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.fl</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.fr</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: right;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">visibility</span>: hidden;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">    <span class="attribute">zoom</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
           
         
@@ -379,7 +461,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -425,7 +507,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

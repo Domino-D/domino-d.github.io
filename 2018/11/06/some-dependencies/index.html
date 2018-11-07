@@ -68,6 +68,7 @@
 
 
 
+  <meta name="keywords" content="React," />
 
 
 
@@ -77,16 +78,19 @@
 
 
 
-<meta name="description" content="博客 备忘 随笔">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Domino-D_Blogs">
-<meta property="og:url" content="http://yoursite.com/page/10/index.html">
+
+<meta name="description" content="react-hot-loaderwebpack-dev-sever 这个依赖包是全局热更新。每次不管是在哪个组件中进行修改，都会在浏览器中全局刷新。 react-hot-loader 是局部热更新，项目体量变得越来越庞大的时候，很有用，毕竟热更新全局加载起来也是比较费劲的。 react-hot-loader 提供的接口中有一个 AppContainer ，具体实现方法如下。npm 或者 yarn">
+<meta name="keywords" content="React">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Some dependencies">
+<meta property="og:url" content="http://yoursite.com/2018/11/06/some-dependencies/index.html">
 <meta property="og:site_name" content="Domino-D_Blogs">
-<meta property="og:description" content="博客 备忘 随笔">
+<meta property="og:description" content="react-hot-loaderwebpack-dev-sever 这个依赖包是全局热更新。每次不管是在哪个组件中进行修改，都会在浏览器中全局刷新。 react-hot-loader 是局部热更新，项目体量变得越来越庞大的时候，很有用，毕竟热更新全局加载起来也是比较费劲的。 react-hot-loader 提供的接口中有一个 AppContainer ，具体实现方法如下。npm 或者 yarn">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-07T14:21:41.212Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Domino-D_Blogs">
-<meta name="twitter:description" content="博客 备忘 随笔">
+<meta name="twitter:title" content="Some dependencies">
+<meta name="twitter:description" content="react-hot-loaderwebpack-dev-sever 这个依赖包是全局热更新。每次不管是在哪个组件中进行修改，都会在浏览器中全局刷新。 react-hot-loader 是局部热更新，项目体量变得越来越庞大的时候，很有用，毕竟热更新全局加载起来也是比较费劲的。 react-hot-loader 提供的接口中有一个 AppContainer ，具体实现方法如下。npm 或者 yarn">
 
 
 
@@ -116,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/page/10/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/11/06/some-dependencies/"/>
 
 
 
 
 
-  <title>Domino-D_Blogs</title>
+  <title>Some dependencies | Domino-D_Blogs</title>
   
 
 
@@ -141,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <a href="https://github.com/Domino-D/Domino-D.github.io" class="github-corner" aria-label="View source on GitHub">
@@ -233,9 +236,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -265,9 +268,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/06/some-dependencies/" itemprop="url">Some dependencies</a></h1>
+          <h1 class="post-title" itemprop="name headline">Some dependencies</h1>
         
 
         <div class="post-meta">
@@ -317,9 +318,7 @@
       
 
       
-        
-          
-            <h4 id="react-hot-loader"><a href="#react-hot-loader" class="headerlink" title="react-hot-loader"></a>react-hot-loader</h4><p>webpack-dev-sever 这个依赖包是全局热更新。每次不管是在哪个组件中进行修改，都会在浏览器中全局刷新。</p>
+        <h4 id="react-hot-loader"><a href="#react-hot-loader" class="headerlink" title="react-hot-loader"></a>react-hot-loader</h4><p>webpack-dev-sever 这个依赖包是全局热更新。每次不管是在哪个组件中进行修改，都会在浏览器中全局刷新。</p>
 <p>react-hot-loader 是局部热更新，项目体量变得越来越庞大的时候，很有用，毕竟热更新全局加载起来也是比较费劲的。</p>
 <p>react-hot-loader 提供的接口中有一个 AppContainer ，具体实现方法如下。npm 或者 yarn 安装包就不说了。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span></span><br><span class="line"><span class="keyword">import</span> &#123; AppContainer &#125; <span class="keyword">from</span> <span class="string">'react-hot-loader'</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./containers/App'</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> render = <span class="function"><span class="params">Component</span> =&gt;</span> &#123;</span><br><span class="line">  ReactDOM.render(</span><br><span class="line">    &lt;AppContainer&gt;  <span class="comment">// AppContainer的调用方式</span></span><br><span class="line">      &lt;Component /&gt;</span><br><span class="line">    &lt;<span class="regexp">/AppContainer&gt;,</span></span><br><span class="line"><span class="regexp">    document.getElementById('root'),</span></span><br><span class="line"><span class="regexp">  )</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"> </span></span><br><span class="line"><span class="regexp">render(App) /</span><span class="regexp">/ 调用 render 函数，传入组件</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ webpack 热更新替代 API</span></span><br><span class="line"><span class="regexp">if (module.hot) &#123;</span></span><br><span class="line"><span class="regexp">  module.hot.accept('./</span>containers/App<span class="string">', () =&gt; &#123;</span></span><br><span class="line"><span class="string">    render(App)</span></span><br><span class="line"><span class="string">  &#125;)</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
@@ -331,8 +330,6 @@
 <p>通常直接写到组件中，静态属性。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> PropTypes <span class="keyword">from</span> <span class="string">'prop-types'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">Component</span></span>&#123;</span><br><span class="line">  <span class="keyword">static</span> propTypes = &#123;</span><br><span class="line">    optionalArray: PropTypes.array,</span><br><span class="line">  	optionalBool: PropTypes.bool,</span><br><span class="line">  	optionalFunc: PropTypes.func,</span><br><span class="line">  	optionalNumber: PropTypes.number,</span><br><span class="line">  	optionalObject: PropTypes.object,</span><br><span class="line">  	optionalString: PropTypes.string,</span><br><span class="line">    optionalSymbol: PropTypes.symbol,</span><br><span class="line">    optionalNode: PropTypes.node, <span class="comment">// 可以是数字，字符串，元素，数组</span></span><br><span class="line">  	optionalElement: PropTypes.element,</span><br><span class="line">  	optionalMessage: PropTypes.instanceOf(Message), <span class="comment">// 属于 Message 这个类</span></span><br><span class="line">  	optionalEnum: PropTypes.oneOf([<span class="string">'News'</span>, <span class="string">'Photos'</span>]), <span class="comment">// 属于某个枚举值</span></span><br><span class="line">  	optionalUnion: PropTypes.oneOfType([ <span class="comment">// 属于某个枚举类型</span></span><br><span class="line">    	PropTypes.string,</span><br><span class="line">    	PropTypes.number,</span><br><span class="line">    	PropTypes.instanceOf(Message)</span><br><span class="line">  	]),</span><br><span class="line">  	optionalArrayOf: PropTypes.arrayOf(PropTypes.number), <span class="comment">// 属于转换为数组以后的值</span></span><br><span class="line">  	optionalObjectOf: PropTypes.objectOf(PropTypes.number), <span class="comment">// 属于转换为对象后的值</span></span><br><span class="line">  	requiredFunc: PropTypes.func.isRequired, <span class="comment">// isRequired 表示不为空</span></span><br><span class="line">  	requiredAny: PropTypes.any.isRequired, <span class="comment">// 表示任何非空值</span></span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="comment">// ......</span></span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-          
-        
       
     </div>
     
@@ -347,14 +344,40 @@
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/React/" rel="tag"># React</a>
+          
+        </div>
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/05/echarts-self-guide/" rel="next" title="Echarts Note">
+                <i class="fa fa-chevron-left"></i> Echarts Note
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/07/React按需加载/" rel="prev" title="React按需加载">
+                React按需加载 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </div>
@@ -364,14 +387,11 @@
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/11/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -379,6 +399,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -399,8 +423,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -451,6 +484,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#react-hot-loader"><span class="nav-number">1.</span> <span class="nav-text">react-hot-loader</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#react-transition-group"><span class="nav-number">2.</span> <span class="nav-text">react-transition-group</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#在组件中的应用："><span class="nav-number">2.0.1.</span> <span class="nav-text">在组件中的应用：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#对应-css-样式文件"><span class="nav-number">2.0.2.</span> <span class="nav-text">对应 css 样式文件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#prop-types"><span class="nav-number">3.</span> <span class="nav-text">prop-types</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -585,6 +634,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
