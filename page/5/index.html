@@ -248,7 +248,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/10/data-operation/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/10/css-note/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Domino-D">
@@ -267,7 +267,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/10/data-operation/" itemprop="url">data-operation</a></h1>
+                <a class="post-title-link" href="/2018/10/10/css-note/" itemprop="url">css note</a></h1>
         
 
         <div class="post-meta">
@@ -319,212 +319,109 @@
       
         
           
-            <h2 id="String-字符串"><a href="#String-字符串" class="headerlink" title="String 字符串"></a>String 字符串</h2><h3 id="string-字符串创建"><a href="#string-字符串创建" class="headerlink" title="string - 字符串创建"></a>string - 字符串创建</h3><ol>
-<li><p><code>let str = &#39;abc&#39;</code> 字符串直接赋值</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Console</span></span><br><span class="line">   abc</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>let str = new String(&#39;abc&#39;)</code> 新建字符串对象</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Console</span></span><br><span class="line"><span class="built_in">String</span> &#123;<span class="string">"abc"</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 0: "a"</span></span><br><span class="line"><span class="comment">// 1: "b"</span></span><br><span class="line"><span class="comment">// 2: "c"</span></span><br><span class="line"><span class="comment">// length: 3</span></span><br><span class="line"><span class="comment">// __proto__: String</span></span><br><span class="line"><span class="comment">// [[PrimitiveValue]]: "abc"</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="string-字符串操作"><a href="#string-字符串操作" class="headerlink" title="string - 字符串操作"></a>string - 字符串操作</h3><ol>
-<li><p><strong><code>charAt(index)</code></strong> 返回字符串中 <code>index</code> 指针对应位置下的字母值。<code>index</code>  从0开始计算。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">'abc'</span></span><br><span class="line">str.charAt(<span class="number">2</span>) <span class="comment">// c</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong><code>charCodeAt(index)</code></strong> 返回字符串中 <code>index</code> 指针对应位置下的字母的unicode数值。<code>index</code> 从0开始计算。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">'abc'</span></span><br><span class="line">str.charCodeAt(<span class="number">1</span>) <span class="comment">// 98</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong><code>concat(str2, str3, ... strn)</code></strong> 连接字符串。返回值为连接后的整个字符串。可以传多个参数。</p>
-<ul>
-<li><blockquote>
-<p>参数会被强制转换为字符串形式。对于数组类型的参数会被强制执行 <code>join()</code> ，转换后会默认保留 <code>,</code> 。</p>
-</blockquote>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">'abc'</span></span><br><span class="line">str.concat(<span class="string">'aaa'</span>) <span class="comment">//abcaaa</span></span><br><span class="line">str.concat([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]) <span class="comment">//abc1,2,3</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong><code>indexOf(value, fromindex)</code></strong> <strong><code>lastIndexOf(value, fromindex)</code></strong>返回某个指定的字符串值在字符串中首次出现的位置。</p>
-<ul>
-<li><blockquote>
-<p><code>fromindex</code> 表示从给定字符串的那个指针开始找起；如果没有找到结果返回 <code>-1</code> ；如果不指定，默认从头开始找，即从0开始。</p>
-</blockquote>
-</li>
-<li><blockquote>
-<p>大小写敏感。</p>
-</blockquote>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">'abc'</span></span><br><span class="line">str.indexOf(<span class="string">'b'</span>) <span class="comment">// 1</span></span><br><span class="line">str.indexOf(<span class="string">'b'</span>, <span class="number">2</span>) <span class="comment">// -1</span></span><br><span class="line">str.indexOf(<span class="string">'A'</span>) <span class="comment">//-1</span></span><br><span class="line">str.lastIndexOf(<span class="string">'a'</span>, <span class="number">1</span>) <span class="comment">// 0</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong><code>match(value|reg)</code></strong> 返回数组对象，没有结果返回 <code>null</code> </p>
-<ul>
-<li><blockquote>
-<p>参数可以是字符串也可以是正则</p>
-<p>如果正则使用全局搜索 <code>g</code> ，则返回一个数组</p>
-</blockquote>
-</li>
-<li><blockquote>
-<p>大小写敏感</p>
-</blockquote>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">'abca'</span></span><br><span class="line">str.match(<span class="string">'a'</span>) <span class="comment">// ["a", index: 0, input: "abc", groups: undefined]</span></span><br><span class="line">str.match(<span class="string">'A'</span>) <span class="comment">// null</span></span><br><span class="line">str.match(<span class="regexp">/a/g</span>) <span class="comment">// ["a", "a"]</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong><code>replace(value|reg, replacement)</code></strong> 返回替换结果字符串</p>
-<ul>
-<li><blockquote>
-<p>参数可以是字符串也可以是正则</p>
-</blockquote>
-</li>
-<li><blockquote>
-<p>大小写敏感</p>
-</blockquote>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">'abca'</span></span><br><span class="line">str.replace(<span class="string">'a'</span>, <span class="string">'d'</span>) <span class="comment">// dbca</span></span><br><span class="line">str.replace(<span class="regexp">/a/g</span>, <span class="string">'d'</span>) <span class="comment">//dbcd</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong><code>slice(fromIndex, toIndex)</code></strong> <strong><code>substr(fromIndex, toIndex)</code></strong> <strong><code>substring(fromIndex, toIndex)</code></strong> 截取字符串中的一部分，并作为返回值</p>
-<ul>
-<li><blockquote>
-<p>如果没有参数，默认为截取所用字符串内容</p>
-</blockquote>
-</li>
-<li><blockquote>
-<p>如果只设定了fromIndex，toindex 没有设定，默认为截取到字符串结束位置</p>
-<p>不包含toindex指针对应的值</p>
-</blockquote>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">'this is js'</span></span><br><span class="line">str.slice(<span class="number">5</span>) <span class="comment">//is js</span></span><br><span class="line">str.slice(<span class="number">5</span>, <span class="number">9</span>) <span class="comment">//is j</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong><code>split(separator,howmany)</code></strong> 分割字符串，返回数组</p>
-<ul>
-<li><blockquote>
-<p>separator 表示用什么标记来分割，参数未设置，默认为不分割。</p>
-</blockquote>
-</li>
-<li><blockquote>
-<p>howmany 表示分割后的数组截获多少个值后，作为返回数组的值</p>
-</blockquote>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">'this is js'</span></span><br><span class="line">str.split(<span class="string">' '</span>) <span class="comment">// ["this", "is", "js"]</span></span><br><span class="line">str.split(<span class="string">' '</span>, <span class="number">2</span>) <span class="comment">// ["this", "is"]</span></span><br><span class="line">str.split(<span class="number">2</span>) <span class="comment">// ["this is js"]</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong><code>toLowerCase()</code></strong> <strong><code>toUpperCase()</code></strong> <strong><code>toLocalLowerCase()</code></strong> <strong><code>toLocalUpperCase()</code></strong> 没有参数，大小写切换</p>
-</li>
-<li><p><strong><code>valueOf()</code></strong>  获取原始字符串值，没有参数</p>
-</li>
-</ol>
-<h3 id="ES6-字符串新特性"><a href="#ES6-字符串新特性" class="headerlink" title="ES6 - 字符串新特性"></a>ES6 - 字符串新特性</h3><ol>
-<li><strong><code>includes()</code></strong> <strong><code>startsWith()</code></strong> <strong><code>endsWith()</code></strong> </li>
-<li><strong><code>repeat()</code></strong> </li>
-<li><strong><code>padStart()</code></strong> <strong><code>padEnd()</code></strong> </li>
-</ol>
-<h2 id="Array-数组"><a href="#Array-数组" class="headerlink" title="Array 数组"></a>Array 数组</h2><h3 id="array-数组创建"><a href="#array-数组创建" class="headerlink" title="array - 数组创建"></a>array - 数组创建</h3><ol>
-<li><strong><code>new Array()</code></strong> 可以指定数组长度，或者列举出说有元素，作为参数传入</li>
-<li><strong><code>let arr = []</code></strong> 直接赋值</li>
-</ol>
-<h3 id="array-数组操作"><a href="#array-数组操作" class="headerlink" title="array - 数组操作"></a>array - 数组操作</h3><ol>
-<li><p><strong><code>concat()</code></strong> 连接数组，并返回结果数组。</p>
-</li>
-<li><p><strong><code>join()</code></strong> 将数组内元素以制定分隔符连接，返回字符串。</p>
-</li>
-<li><p><strong><code>push(value1, value2...)</code></strong> 在数组末尾添加元素，可多个。返回结果数组的长度值。</p>
-</li>
-<li><p><strong><code>pop()</code></strong> 在数组末尾删除一个元素，一次只能删除一个，没有参数。返回被删除元素值。</p>
-</li>
-<li><p><strong><code>reverse()</code></strong> 数组逆序操作，返回逆序数组。</p>
-</li>
-<li><p><strong><code>shift()</code></strong> 删除数组开头的一个元素，一次只能删除一个，没有参数。返回被删除元素值。</p>
-</li>
-<li><p><strong><code>unshift(value1, value2...)</code></strong> 在数组开头添加元素，可多个。返回结果数组的长度值。</p>
-</li>
-<li><p><strong><code>slice(fromIndex, toIndex)</code></strong> 截取数组中部分值。返回截取出元素组成的新数组。 </p>
-<ul>
-<li><blockquote>
-<p>不包含toIndex</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p><strong><code>sort()</code></strong> 对数组中元素进行排序。</p>
-<ul>
-<li><blockquote>
-<p>sort() 排序后，原数组也被变更了。</p>
-</blockquote>
-</li>
-<li><blockquote>
-<p>如果不传参，按照数组字符的编码顺序排序</p>
-</blockquote>
-</li>
-<li><blockquote>
-<p>还可以传比较函数，比较函数返回一个数值与0进行比较，然后决定是否互换两个值的位置。</p>
-</blockquote>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [a, c, b, d]</span><br><span class="line">arr.sort() <span class="comment">// [a, b, c, d]</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong><code>splice(fromIndex, howmany, replacevalue)</code></strong> 增加或者删除数组元素，返回值是数组。</p>
-<ul>
-<li><blockquote>
-<p>splice() 方法后，原数组也被改变了。</p>
-</blockquote>
-</li>
-<li><blockquote>
-<p>如果是添加，返回值为空数组 <code>[]</code> 。</p>
-</blockquote>
-</li>
-<li><blockquote>
-<p>如果是删除，返回值为被删去的元素组成的数组。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p><strong><code>valueOf()</code></strong> 没有参数，返回原始数组。</p>
-</li>
-</ol>
-<h3 id="ES6-数组新特性"><a href="#ES6-数组新特性" class="headerlink" title="ES6 - 数组新特性"></a>ES6 - 数组新特性</h3><ol>
-<li><strong><code>...arg</code></strong> 结构赋值</li>
-<li><strong><code>find()</code></strong> <strong><code>findIndex()</code></strong> </li>
-<li><strong><code>fill()</code></strong> </li>
-<li><strong><code>entries()</code></strong> <strong><code>keys()</code></strong> <strong><code>values()</code></strong> </li>
-<li><strong><code>includes()</code></strong> </li>
-</ol>
-<h2 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h2><h4 id="EventTarget-onclick-function-…"><a href="#EventTarget-onclick-function-…" class="headerlink" title="EventTarget.onclick(function() { … })"></a>EventTarget.onclick(function() { … })</h4><p>点击事件绑定，只能绑定单个，再次绑定会覆盖掉之前的事件绑定。</p>
-<ul>
-<li>只有一个参数，即调用函数。</li>
-</ul>
-<h4 id="EventTarget-addEventListener-type-function-true-false"><a href="#EventTarget-addEventListener-type-function-true-false" class="headerlink" title="EventTarget.addEventListener(type, function, [true/false])"></a>EventTarget.addEventListener(type, function, [true/false])</h4><p>点击事件绑定，可以绑定多个，没有覆盖现象。</p>
-<ul>
-<li><p>三个参数</p>
-<blockquote>
-<p>type 表示事件类型，字符串类型参数，’click’ 等。</p>
-<p>function 表示事件触发相应函数。</p>
-<p>[true/false] 表示是否允许事件捕获，默认为 false。</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="延迟脚本和异步脚本"><a href="#延迟脚本和异步脚本" class="headerlink" title="延迟脚本和异步脚本"></a>延迟脚本和异步脚本</h2><p>脚本执行是同步和阻塞的。直接使用脚本，浏览器解析时是按照自上而下的顺序执行的，在加载和执行过程会阻塞 DOM 渲染，直到脚本加载执行完成。</p>
-<h4 id="延迟脚本-lt-script-defer-src-39-39-gt"><a href="#延迟脚本-lt-script-defer-src-39-39-gt" class="headerlink" title="延迟脚本 &lt;script defer src=&#39;...&#39; /&gt;"></a>延迟脚本 <code>&lt;script defer src=&#39;...&#39; /&gt;</code></h4><blockquote>
-<p><strong>defer</strong>   @boolean</p>
-<p>当浏览器解析到延迟脚本时，不会中断 DOM 加载，同时会加载异步脚本，当浏览器完成文档渲染后，开始执行延迟脚本。</p>
-<p>多个延迟脚本将按照顺序加载和执行。</p>
-<ul>
-<li>如果脚本代码依赖于页面文档是否解析完毕，或者被其它脚本文件依赖。使用延迟脚本。</li>
-</ul>
-</blockquote>
-<h4 id="异步脚本-lt-script-async-src-39-39-gt"><a href="#异步脚本-lt-script-async-src-39-39-gt" class="headerlink" title="异步脚本 &lt;script async src=&#39;...&#39; /&gt;"></a>异步脚本 <code>&lt;script async src=&#39;...&#39; /&gt;</code></h4><blockquote>
-<p><strong>async</strong>   @boolean</p>
-<p>当浏览器解析到异步脚本时，暂时不会中断 DOM 加载，同时会加载异步脚本，该异步脚本加载完成址后，立即中断 DOM 加载，执行该异步脚本。直到异步脚本执行完成址后，浏览器继续解析加载后续 DOM。</p>
-<p>因此，多个异步脚本，没有先后执行顺序。</p>
-<ul>
-<li>如果脚本代码不关心页面文档是否解析完毕，或者被其它脚本文件依赖。使用异步脚本。</li>
-</ul>
-</blockquote>
-<ul>
-<li>如果defer 和 async 同时出现的情况下，async 优先于 defer 。</li>
-<li>defer 比 async 要稳定一点。</li>
-</ul>
+            <h3 id="media"><a href="#media" class="headerlink" title="@media"></a>@media</h3><h4 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h4><pre>
+@media mediatype and|not|only (media feature) {
+    CSS-Code;
+}
+</pre>
+
+<p> <strong>mediatype</strong> 常用参数all ； screen<br> <strong>and|not|only</strong> not不常用；only可以放于mediatype前做限制；and不能前置与media feature相连，同时也用于多个media feature之间相连。<br> <strong>media feature</strong> min-width：定义输出设备中的页面最小可见区域宽度；max-width：定义输出设备中的页面最大可见区域宽度；orientation：portrait|landscape分别表示竖屏、横屏控制。<br> <strong>CSS-Code</strong> 编写对应状态下的css</p>
+<h4 id="用法："><a href="#用法：" class="headerlink" title="用法："></a>用法：</h4><h5 id="打印样式"><a href="#打印样式" class="headerlink" title="打印样式"></a>打印样式</h5><pre>
+@media print {
+color: red;
+}
+</pre>
+
+<h5 id="手机等小屏幕手持设备"><a href="#手机等小屏幕手持设备" class="headerlink" title="手机等小屏幕手持设备"></a>手机等小屏幕手持设备</h5><pre>
+@media screen and (min-width: 320px) and (max-width: 480px){
+body {
+background: yellow;
+}
+}
+</pre>
+
+<h5 id="平板之类的宽度-1024-以下设备"><a href="#平板之类的宽度-1024-以下设备" class="headerlink" title="平板之类的宽度 1024 以下设备"></a>平板之类的宽度 1024 以下设备</h5><pre>
+@media only screen and (min-width: 321px) and (max-width: 1024px) {
+body {
+background: blue;
+}
+}
+</pre>
+
+<h5 id="PC客户端或大屏幕设备-1024px-至更大"><a href="#PC客户端或大屏幕设备-1024px-至更大" class="headerlink" title="PC客户端或大屏幕设备: 1024px 至更大"></a>PC客户端或大屏幕设备: 1024px 至更大</h5><pre>
+@media only screen and (min-width: 1024px) {
+body {
+background: green;
+}
+}
+</pre>
+
+<h5 id="竖屏"><a href="#竖屏" class="headerlink" title="竖屏"></a>竖屏</h5><pre>
+@media screen and (orientation:portrait) and (max-width: 720px) {对应样式}
+</pre>
+
+<h5 id="横屏"><a href="#横屏" class="headerlink" title="横屏"></a>横屏</h5><pre>
+@media screen and (orientation:landscape){对应样式}
+</pre>
+
+<h3 id="import"><a href="#import" class="headerlink" title="@import"></a>@import</h3><p>是css引入的另一种方式，且只能引用css文件。他是在html页面和link标签中css文件加载完成后，再远程加载调用@import xx.css，会引起浏览器回流、重绘和加载，产生http连接，页面加载时长增加，非常不推荐使用。还是用link标签来的实在。</p>
+<h3 id="keyframes"><a href="#keyframes" class="headerlink" title="@keyframes"></a>@keyframes</h3><p>CSS 中 animation属性函数定义</p>
+<h4 id="语法：-1"><a href="#语法：-1" class="headerlink" title="语法："></a>语法：</h4><pre>
+@keyframes animationname {
+keyframes-selector {
+css-styles;
+}
+}
+</pre>
+
+<p> <em>animationname</em> 函数名可自定义<br> <em>keyframes-selector</em> 方式一：0%-100%{css-styles} ；方式二：from{css-styles} to{css-styles}</p>
+<h4 id="用法：-1"><a href="#用法：-1" class="headerlink" title="用法："></a>用法：</h4><h5 id="keyframes-1"><a href="#keyframes-1" class="headerlink" title="@keyframes"></a>@keyframes</h5><p>根据不同浏览器内核，添加相应前缀，如@-webkit-keyframes</p>
+<h5 id="0-100-方式"><a href="#0-100-方式" class="headerlink" title="0%-100%方式"></a>0%-100%方式</h5><pre>
+@keyframes mymove {
+ 0%   {top:0px;}
+ 25%  {top:200px;}
+ 50%  {top:100px;}
+ 75%  {top:200px;}
+ 100% {top:0px;}
+}
+@-webkit-keyframes mymove {
+ 0%   {top:0px;}
+ 25%  {top:200px;}
+ 50%  {top:100px;}
+ 75%  {top:200px;}
+ 100% {top:0px;}
+}
+</pre>
+
+<h5 id="from-css-styles-to-css-styles-方式"><a href="#from-css-styles-to-css-styles-方式" class="headerlink" title="from{css-styles} to{css-styles}方式"></a>from{css-styles} to{css-styles}方式</h5><pre>
+@keyframes mymove {
+ from {top:0px;}
+ to {top:0px;}
+}
+@-webkit-keyframes mymove {
+ from {top:0px;}
+ to {top:0px;}
+}
+</pre>
+
+<h3 id="before和-afterCSS中的伪元素，"><a href="#before和-afterCSS中的伪元素，" class="headerlink" title=":before和:afterCSS中的伪元素，"></a>:before和:afterCSS中的伪元素，</h3><p>可以实现在现有的DOM元素前后增加内容，行内联元素，本身不作为DOM元素，不能用JS进行DOM操作，点击伪元素相当于点击现有元素本身。</p>
+<h4 id="添加内容作用（不赘述）"><a href="#添加内容作用（不赘述）" class="headerlink" title="添加内容作用（不赘述）"></a>添加内容作用（不赘述）</h4><h4 id="清除浮动作用"><a href="#清除浮动作用" class="headerlink" title="清除浮动作用"></a>清除浮动作用</h4><pre>.clearfix:after {
+content: '';
+clear: both;
+}
+</pre>
+
+<p>其中的 ‘.clearfix’ 是类名称，这里只是举例说明<br><br><strong>content属性值允许为空值</strong> 但是 <strong>content属性必须写上</strong> ，否则伪元素不生效，清除浮动也不会生效。<br>相对于空div标签增加清除浮动的方法，伪元素清除浮动的方法，不产生dom节点，这也就不利于搜索和错误检查。在删除清除浮动功能时，空标签容易被发现，需要格外注意检查是不是有伪元素清除浮动作用，避免影响其他元素布局。</p>
+<h3 id="lineheight"><a href="#lineheight" class="headerlink" title="lineheight"></a>lineheight</h3><h4 id="单行文本垂直居中将文本外部第一层容器的height值和该容器的lineheight值定位同一个值。"><a href="#单行文本垂直居中将文本外部第一层容器的height值和该容器的lineheight值定位同一个值。" class="headerlink" title="单行文本垂直居中将文本外部第一层容器的height值和该容器的lineheight值定位同一个值。"></a>单行文本垂直居中将文本外部第一层容器的height值和该容器的lineheight值定位同一个值。</h4><pre>.aclassname {
+display: block;
+height: 100px;
+lineheight: 100px;
+}
+</pre>
+
+<h3 id="display-inline-block-vertical-align：middle"><a href="#display-inline-block-vertical-align：middle" class="headerlink" title="display: inline-block;vertical-align：middle;"></a>display: inline-block;vertical-align：middle;</h3><h4 id="搭配使用实现盒子模型垂直居中"><a href="#搭配使用实现盒子模型垂直居中" class="headerlink" title="搭配使用实现盒子模型垂直居中"></a>搭配使用实现盒子模型垂直居中</h4><p><pre><br>//xxx.html<br>&lt;div class=”outter”&gt;<br>&lt;div class=”ina”&gt;<br>&lt;div class=”inb”&gt;&lt;/div&gt;<br>&lt;/div&gt;<br>&lt;/div&gt;</pre></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//xxx.css</span><br><span class="line"><span class="selector-class">.outter</span> &#123;</span><br><span class="line"><span class="attribute">width</span>: <span class="number">500px</span>;</span><br><span class="line"><span class="attribute">height</span>: <span class="number">500px</span>;</span><br><span class="line"><span class="attribute">background-color</span>: black;</span><br><span class="line"><span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ina</span> &#123;</span><br><span class="line"><span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line"><span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line"><span class="attribute">background-color</span>: red;</span><br><span class="line"><span class="attribute">display</span>: inline-block;</span><br><span class="line"><span class="attribute">vertical-align</span>: middle;</span><br><span class="line"><span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.inb</span> &#123;</span><br><span class="line"><span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line"><span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line"><span class="attribute">display</span>: inline-block;</span><br><span class="line"><span class="attribute">vertical-align</span>: middle;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="CSS-基本初始化"><a href="#CSS-基本初始化" class="headerlink" title="CSS 基本初始化"></a>CSS 基本初始化</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span>, <span class="selector-tag">body</span>, <span class="selector-tag">ul</span>, <span class="selector-tag">li</span>, <span class="selector-tag">p</span>, <span class="selector-tag">h1</span>, <span class="selector-tag">h2</span>, <span class="selector-tag">h3</span>, <span class="selector-tag">form</span>, <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span>, <span class="selector-tag">ol</span> &#123;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">input</span> &#123;<span class="comment">/*默认padding-top和padding-bottom 1px， border 2px*/</span></span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    border： 0；</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.fl</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.fr</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: right;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">visibility</span>: hidden;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">    <span class="attribute">zoom</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
           
         

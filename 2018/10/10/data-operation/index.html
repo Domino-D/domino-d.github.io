@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Domino-D_Blogs">
 <meta property="og:description" content="String 字符串string - 字符串创建 let str = &amp;#39;abc&amp;#39; 字符串直接赋值 12//Console   abc  let str = new String(&amp;#39;abc&amp;#39;) 新建字符串对象 123456789//ConsoleString &amp;#123;&quot;abc&quot;&amp;#125;// 0: &quot;a&quot;// 1: &quot;b&quot;// 2: &quot;c&quot;// length:">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-22T15:55:17.649Z">
+<meta property="og:updated_time" content="2018-11-11T07:29:02.615Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="data-operation">
 <meta name="twitter:description" content="String 字符串string - 字符串创建 let str = &amp;#39;abc&amp;#39; 字符串直接赋值 12//Console   abc  let str = new String(&amp;#39;abc&amp;#39;) 新建字符串对象 123456789//ConsoleString &amp;#123;&quot;abc&quot;&amp;#125;// 0: &quot;a&quot;// 1: &quot;b&quot;// 2: &quot;c&quot;// length:">
@@ -503,21 +503,23 @@
 </blockquote>
 </li>
 </ul>
-<h2 id="延迟脚本和异步脚本"><a href="#延迟脚本和异步脚本" class="headerlink" title="延迟脚本和异步脚本"></a>延迟脚本和异步脚本</h2><p>脚本执行是同步和阻塞的。直接使用脚本，浏览器解析时是按照自上而下的顺序执行的，在加载和执行过程会阻塞 DOM 渲染，直到脚本加载执行完成。</p>
-<h4 id="延迟脚本-lt-script-defer-src-39-39-gt"><a href="#延迟脚本-lt-script-defer-src-39-39-gt" class="headerlink" title="延迟脚本 &lt;script defer src=&#39;...&#39; /&gt;"></a>延迟脚本 <code>&lt;script defer src=&#39;...&#39; /&gt;</code></h4><blockquote>
-<p><strong>defer</strong>   @boolean</p>
-<p>当浏览器解析到延迟脚本时，不会中断 DOM 加载，同时会加载异步脚本，当浏览器完成文档渲染后，开始执行延迟脚本。</p>
-<p>多个延迟脚本将按照顺序加载和执行。</p>
+<h2 id="JS脚本异步加载"><a href="#JS脚本异步加载" class="headerlink" title="JS脚本异步加载"></a>JS脚本异步加载</h2><p>脚本执行是同步和阻塞的。直接使用脚本，浏览器解析时是按照自上而下的顺序执行的，在加载和执行过程会阻塞 DOM 渲染，直到脚本加载执行完成。</p>
+<h4 id="异步脚本-lt-script-defer-src-39-39-gt"><a href="#异步脚本-lt-script-defer-src-39-39-gt" class="headerlink" title="异步脚本 &lt;script defer src=&#39;...&#39; /&gt;"></a>异步脚本 <code>&lt;script defer src=&#39;...&#39; /&gt;</code></h4><blockquote>
+<p><strong>defer</strong>   @param boolean</p>
+<p>当浏览器解析到延迟脚本时，不会中断 文档加载渲染，同时会加载延迟脚本，当浏览器完成文档渲染后，开始执行延迟脚本。</p>
+<p>多个延迟脚本将按照顺序加载，也会按照顺序执行。</p>
 <ul>
 <li>如果脚本代码依赖于页面文档是否解析完毕，或者被其它脚本文件依赖。使用延迟脚本。</li>
+<li>异步脚本总是会在 DOMContentLoaded 之前完成加载执行</li>
 </ul>
 </blockquote>
 <h4 id="异步脚本-lt-script-async-src-39-39-gt"><a href="#异步脚本-lt-script-async-src-39-39-gt" class="headerlink" title="异步脚本 &lt;script async src=&#39;...&#39; /&gt;"></a>异步脚本 <code>&lt;script async src=&#39;...&#39; /&gt;</code></h4><blockquote>
-<p><strong>async</strong>   @boolean</p>
-<p>当浏览器解析到异步脚本时，暂时不会中断 DOM 加载，同时会加载异步脚本，该异步脚本加载完成址后，立即中断 DOM 加载，执行该异步脚本。直到异步脚本执行完成址后，浏览器继续解析加载后续 DOM。</p>
+<p><strong>async</strong>   @param boolean</p>
+<p>当浏览器解析到异步脚本时，不会中断 DOM 加载，同时会加载异步脚本。该异步脚本加载完成后，立即中断 文档 加载渲染，执行该异步脚本。直到异步脚本执行完成址后，浏览器继续解析加载后续 DOM。</p>
 <p>因此，多个异步脚本，没有先后执行顺序。</p>
 <ul>
 <li>如果脚本代码不关心页面文档是否解析完毕，或者被其它脚本文件依赖。使用异步脚本。</li>
+<li>异步脚本或在 DOMContentLoaded 之前加载执行完成 或在 DOMContentLoaded 之后加载执行完成</li>
 </ul>
 </blockquote>
 <ul>
@@ -689,7 +691,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#String-字符串"><span class="nav-number">1.</span> <span class="nav-text">String 字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#string-字符串创建"><span class="nav-number">1.1.</span> <span class="nav-text">string - 字符串创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#string-字符串操作"><span class="nav-number">1.2.</span> <span class="nav-text">string - 字符串操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ES6-字符串新特性"><span class="nav-number">1.3.</span> <span class="nav-text">ES6 - 字符串新特性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array-数组"><span class="nav-number">2.</span> <span class="nav-text">Array 数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#array-数组创建"><span class="nav-number">2.1.</span> <span class="nav-text">array - 数组创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#array-数组操作"><span class="nav-number">2.2.</span> <span class="nav-text">array - 数组操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ES6-数组新特性"><span class="nav-number">2.3.</span> <span class="nav-text">ES6 - 数组新特性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件绑定"><span class="nav-number">3.</span> <span class="nav-text">事件绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#EventTarget-onclick-function-…"><span class="nav-number">3.0.1.</span> <span class="nav-text">EventTarget.onclick(function() { … })</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#EventTarget-addEventListener-type-function-true-false"><span class="nav-number">3.0.2.</span> <span class="nav-text">EventTarget.addEventListener(type, function, [true/false])</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#延迟脚本和异步脚本"><span class="nav-number">4.</span> <span class="nav-text">延迟脚本和异步脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#延迟脚本-lt-script-defer-src-39-39-gt"><span class="nav-number">4.0.1.</span> <span class="nav-text">延迟脚本 &lt;script defer src=&#39;...&#39; /&gt;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#异步脚本-lt-script-async-src-39-39-gt"><span class="nav-number">4.0.2.</span> <span class="nav-text">异步脚本 &lt;script async src=&#39;...&#39; /&gt;</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#String-字符串"><span class="nav-number">1.</span> <span class="nav-text">String 字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#string-字符串创建"><span class="nav-number">1.1.</span> <span class="nav-text">string - 字符串创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#string-字符串操作"><span class="nav-number">1.2.</span> <span class="nav-text">string - 字符串操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ES6-字符串新特性"><span class="nav-number">1.3.</span> <span class="nav-text">ES6 - 字符串新特性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array-数组"><span class="nav-number">2.</span> <span class="nav-text">Array 数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#array-数组创建"><span class="nav-number">2.1.</span> <span class="nav-text">array - 数组创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#array-数组操作"><span class="nav-number">2.2.</span> <span class="nav-text">array - 数组操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ES6-数组新特性"><span class="nav-number">2.3.</span> <span class="nav-text">ES6 - 数组新特性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件绑定"><span class="nav-number">3.</span> <span class="nav-text">事件绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#EventTarget-onclick-function-…"><span class="nav-number">3.0.1.</span> <span class="nav-text">EventTarget.onclick(function() { … })</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#EventTarget-addEventListener-type-function-true-false"><span class="nav-number">3.0.2.</span> <span class="nav-text">EventTarget.addEventListener(type, function, [true/false])</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JS脚本异步加载"><span class="nav-number">4.</span> <span class="nav-text">JS脚本异步加载</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#异步脚本-lt-script-defer-src-39-39-gt"><span class="nav-number">4.0.1.</span> <span class="nav-text">异步脚本 &lt;script defer src=&#39;...&#39; /&gt;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#异步脚本-lt-script-async-src-39-39-gt"><span class="nav-number">4.0.2.</span> <span class="nav-text">异步脚本 &lt;script async src=&#39;...&#39; /&gt;</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
