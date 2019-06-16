@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="多种数据类型变量定义与内置方法变量定义123456789101112131415161718192021222324252627282930313233343536373839404142// numbernum a = 1;// orint b = 2;// ordouble c = 3.4;// stringString a = &apos;123&apos;;// orvar b = &apos;456&apos;;// bool">
+<meta name="description" content="变量定义与扩展Dart数字变量定义 1234var a = 1;num b = 1;int c = 2; // 整型double d = 3.4; // 浮点型 Dart字符串变量定义 12var a = &apos;456&apos;;String b = &apos;123&apos;; Dart布尔值变量定义与扩展 123456789101112131415var a = true;bool b = false;// 扩展bool">
 <meta name="keywords" content="dart">
 <meta property="og:type" content="article">
 <meta property="og:title" content="dart_notes">
 <meta property="og:url" content="http://yoursite.com/2019/04/25/dart-notes/index.html">
 <meta property="og:site_name" content="Domino-D_Blogs">
-<meta property="og:description" content="多种数据类型变量定义与内置方法变量定义123456789101112131415161718192021222324252627282930313233343536373839404142// numbernum a = 1;// orint b = 2;// ordouble c = 3.4;// stringString a = &apos;123&apos;;// orvar b = &apos;456&apos;;// bool">
+<meta property="og:description" content="变量定义与扩展Dart数字变量定义 1234var a = 1;num b = 1;int c = 2; // 整型double d = 3.4; // 浮点型 Dart字符串变量定义 12var a = &apos;456&apos;;String b = &apos;123&apos;; Dart布尔值变量定义与扩展 123456789101112131415var a = true;bool b = false;// 扩展bool">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-25T15:20:34.654Z">
+<meta property="og:updated_time" content="2019-06-16T12:08:46.753Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="dart_notes">
-<meta name="twitter:description" content="多种数据类型变量定义与内置方法变量定义123456789101112131415161718192021222324252627282930313233343536373839404142// numbernum a = 1;// orint b = 2;// ordouble c = 3.4;// stringString a = &apos;123&apos;;// orvar b = &apos;456&apos;;// bool">
+<meta name="twitter:description" content="变量定义与扩展Dart数字变量定义 1234var a = 1;num b = 1;int c = 2; // 整型double d = 3.4; // 浮点型 Dart字符串变量定义 12var a = &apos;456&apos;;String b = &apos;123&apos;; Dart布尔值变量定义与扩展 123456789101112131415var a = true;bool b = false;// 扩展bool">
 
 
 
@@ -318,8 +318,98 @@
       
 
       
-        <h2 id="多种数据类型变量定义与内置方法"><a href="#多种数据类型变量定义与内置方法" class="headerlink" title="多种数据类型变量定义与内置方法"></a>多种数据类型变量定义与内置方法</h2><h4 id="变量定义"><a href="#变量定义" class="headerlink" title="变量定义"></a>变量定义</h4><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// number</span></span><br><span class="line"><span class="built_in">num</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="comment">// or</span></span><br><span class="line"><span class="built_in">int</span> b = <span class="number">2</span>;</span><br><span class="line"><span class="comment">// or</span></span><br><span class="line"><span class="built_in">double</span> c = <span class="number">3.4</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// string</span></span><br><span class="line"><span class="built_in">String</span> a = <span class="string">'123'</span>;</span><br><span class="line"><span class="comment">// or</span></span><br><span class="line"><span class="keyword">var</span> b = <span class="string">'456'</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// boolean</span></span><br><span class="line"><span class="built_in">bool</span> a = <span class="keyword">true</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="string">'123'</span>;</span><br><span class="line"><span class="comment">// 在条件判断中，判别变量必须是布尔型</span></span><br><span class="line"><span class="keyword">if</span>(a) &#123;</span><br><span class="line">  <span class="comment">// 可执行</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(b) &#123;</span><br><span class="line">  <span class="comment">// 不执行</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(b == <span class="string">'123'</span>) &#123;</span><br><span class="line">  <span class="comment">// 可执行</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// list</span></span><br><span class="line"><span class="built_in">List</span> list = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> list1 = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// map</span></span><br><span class="line"><span class="comment">// 键值对中键名必须用引号编写，区别于js</span></span><br><span class="line"><span class="built_in">Map</span> map = &#123;<span class="string">'a'</span>: <span class="number">123</span>, <span class="string">'b'</span>: <span class="number">456</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> map1 = &#123;<span class="string">'a'</span>: <span class="number">123</span>, <span class="string">'b'</span>: <span class="number">456</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// function</span></span><br><span class="line">func() &#123; ... &#125;</span><br><span class="line">func() =&gt; ...</span><br><span class="line"><span class="comment">// 必填参数：a，可选参数：b，可选默认参数：c</span></span><br><span class="line">func(<span class="built_in">int</span> a, [<span class="built_in">bool</span> b, <span class="built_in">String</span> c: <span class="string">'123'</span>]) &#123; ... &#125;</span><br></pre></td></tr></table></figure>
-<h4 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h4><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// + - * / %</span></span><br><span class="line"><span class="comment">// ~/</span></span><br><span class="line"><span class="comment">// 计算结果向下取整</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">3.6</span> ~/ <span class="number">2</span>; <span class="comment">// 1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ++var var++ --var var--</span></span><br><span class="line"><span class="comment">// == != &lt; &lt;= &gt; &gt;=</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// is is!</span></span><br><span class="line"><span class="comment">// 类型判断</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">123</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="string">'123'</span>;</span><br><span class="line"><span class="built_in">print</span>(a <span class="keyword">is</span> <span class="built_in">num</span>); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">print</span>(a <span class="keyword">is</span>! <span class="built_in">num</span>); <span class="comment">//false</span></span><br><span class="line"><span class="built_in">print</span>(b <span class="keyword">is</span> <span class="built_in">String</span>); <span class="comment">//true</span></span><br><span class="line"><span class="built_in">print</span>(b <span class="keyword">is</span>! <span class="built_in">String</span>); <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+        <h4 id="变量定义与扩展"><a href="#变量定义与扩展" class="headerlink" title="变量定义与扩展"></a>变量定义与扩展</h4><p>Dart数字变量定义</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">num</span> b = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">int</span> c = <span class="number">2</span>; <span class="comment">// 整型</span></span><br><span class="line"><span class="built_in">double</span> d = <span class="number">3.4</span>; <span class="comment">// 浮点型</span></span><br></pre></td></tr></table></figure>
+<p>Dart字符串变量定义</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">'456'</span>;</span><br><span class="line"><span class="built_in">String</span> b = <span class="string">'123'</span>;</span><br></pre></td></tr></table></figure>
+<p>Dart布尔值变量定义与扩展</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="keyword">true</span>;</span><br><span class="line"><span class="built_in">bool</span> b = <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 扩展</span></span><br><span class="line"><span class="built_in">bool</span> foo = <span class="keyword">true</span>;</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">'123'</span>;</span><br><span class="line"><span class="keyword">if</span>(foo) &#123;</span><br><span class="line">  <span class="comment">// 可执行</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(str) &#123;</span><br><span class="line">  <span class="comment">// 不执行</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(str == <span class="string">'123'</span>) &#123;</span><br><span class="line">  <span class="comment">// 可执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>如果单个变量作为条件进行判断时候，变量类型必须为布尔型，否则报错</li>
+<li>与JS相比，没有JS变量类型灵活多变，更受控</li>
+</ul>
+</blockquote>
+<p>Dart列表变量定义</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> list = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="built_in">List</span> list1 = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br></pre></td></tr></table></figure>
+<p>Dart对象变量定义</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> map = &#123;<span class="string">'a'</span>: <span class="number">123</span>, <span class="string">'b'</span>: <span class="number">456</span>&#125;;</span><br><span class="line"><span class="built_in">Map</span> map1 = &#123;<span class="string">'a'</span>: <span class="number">123</span>, <span class="string">'b'</span>: <span class="number">456</span>&#125;;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>键名需要用引号，键名也可以是纯数字不含引号，区别于JS</li>
+<li>Dart对象没有点方法，调用对象中某键值或者赋值，使用 Map[‘key’]来实现</li>
+</ul>
+</blockquote>
+<p>Dart函数定义与扩展</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">func() &#123;</span><br><span class="line">  <span class="comment">// statement</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func() =&gt; statement</span><br><span class="line">  </span><br><span class="line"><span class="comment">// 扩展</span></span><br><span class="line">func(<span class="built_in">int</span> a, [<span class="built_in">bool</span> b, <span class="built_in">String</span> c: <span class="string">'123'</span>]) &#123; <span class="comment">// 必填参数：a，可选参数：b，可选默认参数：c</span></span><br><span class="line">  <span class="comment">// statement</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="变量申明"><a href="#变量申明" class="headerlink" title="变量申明"></a>变量申明</h4><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// var</span></span><br><span class="line"><span class="comment">// 申明动态类型变量</span></span><br><span class="line"><span class="comment">// 不能与静态类型申明同时出现</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="string">'123'</span>;</span><br><span class="line"><span class="keyword">var</span> <span class="built_in">String</span> a1 = <span class="string">'abc'</span>; <span class="comment">// 错误申明方式</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// dynamic</span></span><br><span class="line"><span class="comment">// 申明动态类型变量</span></span><br><span class="line"><span class="comment">// 不能与静态类型申明同时出现</span></span><br><span class="line"><span class="keyword">dynamic</span> b = <span class="number">123</span>;</span><br><span class="line"><span class="keyword">dynamic</span> <span class="built_in">String</span> b1 = <span class="string">'abc'</span>; <span class="comment">// 错误申明方式</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// final</span></span><br><span class="line"><span class="comment">// 申明动态类型变量，赋值后不可变更</span></span><br><span class="line"><span class="comment">// 可以与静态类型申明同时出现</span></span><br><span class="line"><span class="keyword">final</span> c = <span class="keyword">true</span>;</span><br><span class="line"><span class="keyword">final</span> <span class="built_in">bool</span> c1 = <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// const</span></span><br><span class="line"><span class="comment">// 申明动态类型变量，赋值后不可变更</span></span><br><span class="line"><span class="comment">// 可以与静态类型申明同时出现</span></span><br><span class="line"><span class="keyword">const</span> d = <span class="keyword">true</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">bool</span> d1 = <span class="keyword">false</span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>var 和 dynamic 可以互换通用</li>
+<li>final 和 const 可以互换通用</li>
+<li>final 和 const 申明的列表或对象类型的Dart变量，内部元素值也不能做修改，不同于JS</li>
+</ul>
+</blockquote>
+<h4 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h4><p>对比 Dart 与 JS 操作符号</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>Dart</th>
+<th>JS</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>赋值、加、减、乘、除、取余</td>
+<td>= + - * / %</td>
+<td>= + - * / %</td>
+<td>完全相同</td>
+</tr>
+<tr>
+<td>向下取整</td>
+<td>~/</td>
+<td>N/A</td>
+<td></td>
+</tr>
+<tr>
+<td>自增、自减</td>
+<td>++var var++ –var var–</td>
+<td>++var var++ –var var–</td>
+<td>完全相同</td>
+</tr>
+<tr>
+<td>全等</td>
+<td>==</td>
+<td>===</td>
+<td></td>
+</tr>
+<tr>
+<td>抽象等于</td>
+<td>N/A</td>
+<td>==</td>
+<td></td>
+</tr>
+<tr>
+<td>不等</td>
+<td>!=</td>
+<td>!==</td>
+<td></td>
+</tr>
+<tr>
+<td>小于、小于等于、大于、大于等于</td>
+<td>&lt; &lt;= &gt; &gt;=</td>
+<td>&lt; &lt;= &gt; &gt;=</td>
+<td>完全相同</td>
+</tr>
+<tr>
+<td>类型判断</td>
+<td>is is!</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
 <h4 id="字符串属性与操作方法"><a href="#字符串属性与操作方法" class="headerlink" title="字符串属性与操作方法"></a>字符串属性与操作方法</h4><h6 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h6><table>
 <thead>
 <tr>
@@ -331,6 +421,10 @@
 <tr>
 <td>isEmpty</td>
 <td>判断字符串是否为空字符串</td>
+</tr>
+<tr>
+<td>isNotEmpty</td>
+<td>判断字符串是否为非空字符串</td>
 </tr>
 <tr>
 <td>length</td>
@@ -347,8 +441,64 @@
 </thead>
 <tbody>
 <tr>
+<td style="text-align:left">compareTo(String other) → int</td>
+<td style="text-align:left">将此对象与另一对象进行比较，小于本身1，相等0，大于本身-1，字符串比较</td>
+</tr>
+<tr>
+<td style="text-align:left">contains(Pattern other, [int startIndex = 0]) → bool</td>
+<td style="text-align:left">判断字符串中是否包含给定字符串或正则表达式，返回【boolean】</td>
+</tr>
+<tr>
+<td style="text-align:left">endsWith(String other) → bool</td>
+<td style="text-align:left">判断字符串是否以给定字符串结尾，返回【boolean】</td>
+</tr>
+<tr>
+<td style="text-align:left">indexOf(Pattern pattern, [int start]) → int</td>
+<td style="text-align:left">获取给定字符串在字符串中的第一个指针值</td>
+</tr>
+<tr>
+<td style="text-align:left">lastIndexOf(Pattern pattern, [int start]) → int</td>
+<td style="text-align:left">获取给定字符串在字符串中的最后一个指针值</td>
+</tr>
+<tr>
+<td style="text-align:left">padLeft(int width, [String padding = ‘ ‘]) → String</td>
+<td style="text-align:left">如果字符串自身长度小于width，在字符串左侧填补padding补足</td>
+</tr>
+<tr>
+<td style="text-align:left">padRight(int width, [String padding = ‘ ‘]) → String</td>
+<td style="text-align:left">如果字符串自身长度小于width，在字符串右侧填补padding补足</td>
+</tr>
+<tr>
+<td style="text-align:left">replaceAll(Pattern from, String replace) → String</td>
+<td style="text-align:left">全局替换内容，返回替换后字符串，不改变原字符串</td>
+</tr>
+<tr>
+<td style="text-align:left">replaceFirst(Pattern from, String to, [int startIndex = 0]) → String</td>
+<td style="text-align:left">替换字符串中第一个匹配内容，可指定匹配起始指针，返回新字符串，不改变原字符串</td>
+</tr>
+<tr>
+<td style="text-align:left">split(Pattern pattern) → List<string></string></td>
+<td style="text-align:left">按照给定方式，将字符串拆分为列表，返回列表</td>
+</tr>
+<tr>
+<td style="text-align:left">splitMapJoin(Pattern pattern, {(Match) → String onMatch, (String) → String onNonMatch}) → String</td>
+<td style="text-align:left">同时替换匹配目标和不匹配目标，返回字符串</td>
+</tr>
+<tr>
+<td style="text-align:left">startsWith(Pattern pattern, [int index = 0]) → bool</td>
+<td style="text-align:left">判断字符串是否以给定字符串开头，返回【boolean】</td>
+</tr>
+<tr>
+<td style="text-align:left">substring(int startIndex, [int endIndex]) → String</td>
+<td style="text-align:left">返回此字符串的子字符串，[左闭右开)，未指定结束指针默认为末尾指针</td>
+</tr>
+<tr>
 <td style="text-align:left">toLowerCase()</td>
 <td style="text-align:left">将此字符串中的所有字符转换为小写，不改变本身</td>
+</tr>
+<tr>
+<td style="text-align:left">toString()</td>
+<td style="text-align:left">返回此对象的字符串表示形式</td>
 </tr>
 <tr>
 <td style="text-align:left">toUpperCase()</td>
@@ -356,31 +506,21 @@
 </tr>
 <tr>
 <td style="text-align:left">trim()</td>
-<td style="text-align:left">去除头尾空格的字符串，不改变本身</td>
+<td style="text-align:left">去除字符串首尾空格，不改变本身</td>
 </tr>
 <tr>
-<td style="text-align:left">compareTo()</td>
-<td style="text-align:left">将此对象与另一对象进行比较，小于本身1，相等0，大于本身-1，字符串比较</td>
+<td style="text-align:left">trimLeft()</td>
+<td style="text-align:left">去除字符串首部空格，不改变本身</td>
 </tr>
 <tr>
-<td style="text-align:left">replaceAll()</td>
-<td style="text-align:left">用给定值替换与指定模式匹配的所有子字符串，不改变本身，返回结果字符串</td>
-</tr>
-<tr>
-<td style="text-align:left">split()</td>
-<td style="text-align:left">在指定分隔符的匹配处拆分字符串，返回子字符串列表</td>
-</tr>
-<tr>
-<td style="text-align:left">substring()</td>
-<td style="text-align:left">返回此字符串的子字符串，[左包右闭)</td>
-</tr>
-<tr>
-<td style="text-align:left">toString()</td>
-<td style="text-align:left">返回此对象的字符串表示形式</td>
+<td style="text-align:left">trimRight()</td>
+<td style="text-align:left">去除字符串尾部空格，不改变本身</td>
 </tr>
 </tbody>
 </table>
-<h4 id="数值属性与操作方法"><a href="#数值属性与操作方法" class="headerlink" title="数值属性与操作方法"></a>数值属性与操作方法</h4><h6 id="属性-1"><a href="#属性-1" class="headerlink" title="属性"></a>属性</h6><table>
+<p>示例</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// padLeft</span></span><br><span class="line"><span class="string">'abc'</span>.padLeft(<span class="number">5</span>, <span class="string">'_'</span>); <span class="comment">// __abc</span></span><br><span class="line"><span class="string">'abc'</span>.padLeft(<span class="number">1</span>, <span class="string">'_'</span>); <span class="comment">// abc</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// splitMapJoin</span></span><br><span class="line"><span class="string">'ababab'</span>.splitMapJoin(<span class="string">'a'</span>, onMatch: (m) =&gt; <span class="string">'c'</span>, onNonMatch: (n) =&gt; <span class="string">'d'</span>); <span class="comment">// cdcdcd</span></span><br><span class="line"><span class="string">'ababab'</span>.splitMapJoin(<span class="string">'a'</span>, onMatch: (m) =&gt; <span class="string">'c'</span>, onNonMatch: (n) =&gt; n); <span class="comment">// cbcbcb</span></span><br></pre></td></tr></table></figure>
+<h4 id="数字属性与操作方法"><a href="#数字属性与操作方法" class="headerlink" title="数字属性与操作方法"></a>数字属性与操作方法</h4><h6 id="属性-1"><a href="#属性-1" class="headerlink" title="属性"></a>属性</h6><table>
 <thead>
 <tr>
 <th>属性</th>
@@ -390,32 +530,31 @@
 <tbody>
 <tr>
 <td>isFinite</td>
-<td>判断数值为是否为有限大小</td>
+<td>判断数字是否为有限大小</td>
 </tr>
 <tr>
 <td>isInfinite</td>
-<td>判断数值为是否为无穷大小</td>
+<td>判断数字是否为无穷大小</td>
 </tr>
 <tr>
 <td>isNegative</td>
-<td>判断数值为是否为负数</td>
+<td>判断数字是否为负数</td>
 </tr>
 <tr>
 <td>sign</td>
-<td>判断数值为正数、负数或零，返回 1，-1，0</td>
+<td>判断数字为正数、负数或零，返回 1，-1，0</td>
 </tr>
 <tr>
 <td>isEven</td>
-<td>判断数值为偶数</td>
+<td>判断数字为偶数</td>
 </tr>
 <tr>
 <td>isOdd</td>
-<td>判断数值为奇数</td>
+<td>判断数字为奇数</td>
 </tr>
 </tbody>
 </table>
-<p>方法</p>
-<table>
+<h6 id="方法-1"><a href="#方法-1" class="headerlink" title="方法"></a>方法</h6><table>
 <thead>
 <tr>
 <th>方法</th>
@@ -425,31 +564,49 @@
 <tbody>
 <tr>
 <td>abs()</td>
-<td>绝对值</td>
+<td>取绝对值</td>
 </tr>
 <tr>
 <td>ceil()</td>
 <td>向上取整</td>
 </tr>
 <tr>
+<td>ceilToDouble()</td>
+<td>向上取整同时转为浮点型</td>
+</tr>
+<tr>
+<td>clamp(num lowerLimit, num upperLimit) → num</td>
+<td>数字在区间内，返回该数字；数字不在区间内，返回最接近该数字的边界值 lowerLimit \</td>
+<td>\</td>
+<td>upperLimit</td>
+</tr>
+<tr>
+<td>compareTo(num other) → int</td>
+<td>比较数值两数值大小，返回 1，-1，0</td>
+</tr>
+<tr>
 <td>floor()</td>
 <td>向下取整</td>
+</tr>
+<tr>
+<td>floorToDouble()</td>
+<td>向下取整同时转为浮点型</td>
 </tr>
 <tr>
 <td>round()</td>
 <td>四舍五入</td>
 </tr>
 <tr>
+<td>roundToDouble()</td>
+<td>四舍五入同时转为浮点型</td>
+</tr>
+<tr>
 <td>remainder(x)</td>
 <td>x表述除数，计算数值除以除数后得到的余数</td>
 </tr>
 <tr>
-<td>compareTo()</td>
-<td>比较数值两数值大小，返回 1，-1，0</td>
-</tr>
-<tr>
 <td>toInt()</td>
-<td>转为整形</td>
+<td>转为整型</td>
 </tr>
 <tr>
 <td>toDouble()</td>
@@ -462,6 +619,309 @@
 <tr>
 <td>truncate()</td>
 <td>舍去小数，截断功能</td>
+</tr>
+</tbody>
+</table>
+<p>示例</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// clamp</span></span><br><span class="line"><span class="built_in">num</span> number = <span class="number">6</span>,<span class="number">4</span>;</span><br><span class="line">number.clamp(<span class="number">5</span>, <span class="number">7</span>); <span class="comment">// 6.4</span></span><br><span class="line">number.clamp(<span class="number">5</span>, <span class="number">6</span>); <span class="comment">// 6</span></span><br><span class="line">number.clamp(<span class="number">7</span>, <span class="number">9</span>); <span class="comment">// 7</span></span><br></pre></td></tr></table></figure>
+<h4 id="列表属性与操作方法"><a href="#列表属性与操作方法" class="headerlink" title="列表属性与操作方法"></a>列表属性与操作方法</h4><h6 id="属性-2"><a href="#属性-2" class="headerlink" title="属性"></a>属性</h6><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>first</td>
+<td>返回列表中第一个元素</td>
+</tr>
+<tr>
+<td>isEmpty</td>
+<td>判断列表为空列表【boolean】</td>
+</tr>
+<tr>
+<td>isNotEmpty</td>
+<td>判断列表为非空列表【boolean】</td>
+</tr>
+<tr>
+<td>length</td>
+<td>列表长度</td>
+</tr>
+<tr>
+<td>last</td>
+<td>返回列表中最后一个元素</td>
+</tr>
+<tr>
+<td>reversed</td>
+<td>返回倒序列表</td>
+</tr>
+<tr>
+<td>single</td>
+<td>检查列表是否只用一个元素并返回该元素，否则报错[Too many elements]</td>
+</tr>
+</tbody>
+</table>
+<h6 id="方法-2"><a href="#方法-2" class="headerlink" title="方法"></a>方法</h6><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>add(el)</td>
+<td>在列表末尾添加单个元素</td>
+</tr>
+<tr>
+<td>addAll([el1, el2, …])</td>
+<td>在列表末尾添加多个元素</td>
+</tr>
+<tr>
+<td>asMap()</td>
+<td>将列表转换为对象，键名为原列表指针</td>
+</tr>
+<tr>
+<td>any()</td>
+<td>列表中是否有至少一个元素满足条件【boolean】，类同于contains()</td>
+</tr>
+<tr>
+<td>clear()</td>
+<td>清空列表，改变原列表</td>
+</tr>
+<tr>
+<td>contains(el)</td>
+<td>列表中是否包含某元素【boolean】，类同于any()</td>
+</tr>
+<tr>
+<td>elementAt(index)</td>
+<td>返回对应指针的元素值</td>
+</tr>
+<tr>
+<td>every((E) → bool test) → bool</td>
+<td>列表中是否每个元素都满足条件【boolean】</td>
+</tr>
+<tr>
+<td>expand((el) =&gt; statement)</td>
+<td>对列表中的每个元素进行扩展操作，返回可遍历对象(el1, el2, el3, …)</td>
+</tr>
+<tr>
+<td>fillRange(int start, int end, [int fillValue])</td>
+<td>指定指针区间单一元素填充，start 必填，end 必填，[左闭右开)，fillValue 为单个 int 型变量</td>
+</tr>
+<tr>
+<td>firstWhere((E) → bool test, {() → E orElse})</td>
+<td>返回列表中满足条件的第一个元素，不满足则返回-1</td>
+</tr>
+<tr>
+<td>getRange(int start, int end) → Iterable<e></e></td>
+<td>获取指针区间内元素的可遍历对象，[左闭右开)</td>
+</tr>
+<tr>
+<td>insert(int index, int value)</td>
+<td>在列表指定指针位置插入单个int型元素</td>
+</tr>
+<tr>
+<td>insertAll(int index, Iterable<int> iterable)</int></td>
+<td>在列表指定指针位置插入int型元素列表</td>
+</tr>
+<tr>
+<td>indexOf(el) → int</td>
+<td>返回给定元素指针，不满足则返回-1</td>
+</tr>
+<tr>
+<td>indexWhere((int) → bool test, [int start = 0])</td>
+<td>返回列表中满足条件的第一个元素的指针，可指定验证起始指针，默认从头开始，不满足则返回-1</td>
+</tr>
+<tr>
+<td>join([String separator = “”])</td>
+<td>返回字符串，默认不分割，参照JS中join方法</td>
+</tr>
+<tr>
+<td>lastIndexOf(int element, [int start])</td>
+<td>返回指定元素的指针值，可以给定起始查询指针，不满足则返回-1</td>
+</tr>
+<tr>
+<td>lastIndexWhere((dynamic) → bool test, [int start]) → int</td>
+<td>返回列表中满足条件的倒数第一个元素的指针，可指定起始指针，不满足则返回-1</td>
+</tr>
+<tr>
+<td>lastWhere((E) → bool test, {() → E orElse}) → E</td>
+<td>返回列表中满足条件的倒数第一个元素，否则报错</td>
+</tr>
+<tr>
+<td>map<t>((E) → T f) → iterable<t></t></t></td>
+<td>遍历扩展每个列表中的元素，返回可遍历对象</td>
+</tr>
+<tr>
+<td>removeAt(int index) → int</td>
+<td>删除指定指针对应的元素值，返回被删除元素，更改原列表</td>
+</tr>
+<tr>
+<td>remove(el)</td>
+<td>删除指定元素值，返回【boolean】，更改原列表</td>
+</tr>
+<tr>
+<td>removeLast() → int</td>
+<td>删除列表最后一个元素，返回被删除元素值，更改原列表</td>
+</tr>
+<tr>
+<td>removeRange(int start, int end)</td>
+<td>删除列表指针区间内元素，无返回值，更改原列表</td>
+</tr>
+<tr>
+<td>removeWhere((String) → bool test) → void</td>
+<td>删除列表中满足判断条件的所有元素，无返回值，更改原列表</td>
+</tr>
+<tr>
+<td>replaceRange(int start, int end, Iterable<int> replacement)</int></td>
+<td>替换列表中给定指针区间内的元素，更改原列表</td>
+</tr>
+<tr>
+<td>retainWhere((int) → bool test) → void</td>
+<td>筛选出列表中满足条件的所有元素的列表，替代原列表，无返回值</td>
+</tr>
+<tr>
+<td>setAll(int index, Iterable<int> iterable) → void</int></td>
+<td>从指定指针开始替换列表元素，不能溢出，无返回值</td>
+</tr>
+<tr>
+<td>setRange(int start, int end, Iterable<int> iterable, [int skipCount = 0]) → void</int></td>
+<td>更改列表指定指针区间内的元素，无返回值</td>
+</tr>
+<tr>
+<td>shuffle() → void</td>
+<td>随机排序列表，无返回值</td>
+</tr>
+<tr>
+<td>skip(int count) → Iterable<e></e></td>
+<td>跳过列表前count个元素，返回可遍历对象，非列表</td>
+</tr>
+<tr>
+<td>sort([(int, int) → int compare]) → void</td>
+<td>快速排序</td>
+</tr>
+<tr>
+<td>sublist(int start, [int end]) → List<string></string></td>
+<td>从列表中截取起止指针区间内的元素，返回结果列表，[左闭右开)</td>
+</tr>
+<tr>
+<td>take(int count) → Iterable<e></e></td>
+<td>截取列表前count个元素，并返回可遍历对象</td>
+</tr>
+<tr>
+<td>takeWhile((E) → bool test) → Iterable<e></e></td>
+<td>从列表首个元素开始验证条件，返回可遍历对象，任一元素不符合条件，立即停止条件判断</td>
+</tr>
+<tr>
+<td>toList()</td>
+<td>列表化数据，可遍历对象转列表</td>
+</tr>
+<tr>
+<td>toSet()</td>
+<td>去重列表化数据</td>
+</tr>
+<tr>
+<td>toString()</td>
+<td>字符串话数据</td>
+</tr>
+<tr>
+<td>where((E) → bool test) → Iterable<e></e></td>
+<td>筛选出满足条件的可遍历对象</td>
+</tr>
+<tr>
+<td>whereType<t>() → Iterable<t></t></t></td>
+<td>筛选列表中某类型的所有元素，返回可遍历对象</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// expand</span></span><br><span class="line"><span class="built_in">List</span> a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> b = a.expand((el) =&gt; [el, el + <span class="number">1</span>]);</span><br><span class="line"><span class="keyword">var</span> c = b.toList();</span><br><span class="line"><span class="built_in">print</span>(b); <span class="comment">// (1, 2, 2, 3, 3, 4)</span></span><br><span class="line"><span class="built_in">print</span>(c); <span class="comment">// [1, 2, 2, 3, 3, 4]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// fillRange</span></span><br><span class="line"><span class="built_in">List</span> list = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">list.fillRange(<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>); <span class="comment">// [1, 4, 3]</span></span><br><span class="line">list.fillRange(<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>); <span class="comment">// [1, 4, 4]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// getRange</span></span><br><span class="line"><span class="built_in">List</span> foo = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> res = foo.getRange(<span class="number">1</span>, <span class="number">3</span>);</span><br><span class="line"><span class="built_in">print</span>(res); <span class="comment">// (2, 3)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// lastIndexWhere</span></span><br><span class="line"><span class="built_in">List</span> liw = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line">liw.lastIndexWhere((el) =&gt; el &gt; <span class="number">4</span>); <span class="comment">// 2</span></span><br><span class="line">liw.lastIndexWhere((el) =&gt; el &gt; <span class="number">1</span>, <span class="number">1</span>) <span class="comment">// 1</span></span><br><span class="line">liw.lastIndexWhere((el) =&gt; el &gt; <span class="number">1</span>, <span class="number">0</span>) <span class="comment">// -1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// lastWhere</span></span><br><span class="line"><span class="built_in">List</span> lw = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line">lw.lastWhere((el) =&gt; el &gt; <span class="number">1</span>); <span class="comment">// 6</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// map</span></span><br><span class="line"><span class="keyword">var</span> ls = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> resls = ls.map((el) =&gt; el + <span class="number">1</span>);</span><br><span class="line"><span class="keyword">var</span> resls = ls.map((el) =&gt; el + <span class="number">1</span>).toList();</span><br><span class="line"><span class="built_in">print</span>(resls); <span class="comment">// (1, 2, 3)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// replaceRange</span></span><br><span class="line"><span class="built_in">List</span> l = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">l.replaceRange(<span class="number">0</span>, <span class="number">2</span>, [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]); <span class="comment">// [4, 5, 6, 3, 4, 5]</span></span><br><span class="line">l.replaceRange(<span class="number">0</span>, <span class="number">2</span>, [<span class="number">4</span>]); <span class="comment">// [4, 3, 4, 5]</span></span><br><span class="line">l.replaceRange(<span class="number">0</span>, <span class="number">2</span>, []); <span class="comment">// [3, 4, 5]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// retainWhere</span></span><br><span class="line"><span class="keyword">var</span> retainList = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line">retainList.retainWhere((el) =&gt; el &gt; <span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(retainList); <span class="comment">// [3, 4]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// setAll</span></span><br><span class="line"><span class="keyword">var</span> setList = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">setList.setAll(<span class="number">1</span>, [<span class="number">4</span>, <span class="number">5</span>]);</span><br><span class="line"><span class="built_in">print</span>(setList); <span class="comment">// [1, 4, 5]</span></span><br><span class="line">setList.setAll(<span class="number">1</span>, [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]);</span><br><span class="line"><span class="built_in">print</span>(setList); <span class="comment">// RangeError.checkValidRange</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// setRange</span></span><br><span class="line"><span class="built_in">List</span>&lt;<span class="built_in">int</span>&gt; list1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="built_in">List</span>&lt;<span class="built_in">int</span>&gt; list2 = [<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>];</span><br><span class="line">list1.setRange(<span class="number">1</span>, <span class="number">3</span>, list2, <span class="number">3</span>);</span><br><span class="line"><span class="built_in">print</span>(list1); <span class="comment">// [1, 8, 9, 4]</span></span><br><span class="line">list1.setRange(<span class="number">1</span>, <span class="number">3</span>, list2, <span class="number">1</span>);</span><br><span class="line"><span class="built_in">print</span>(list1); <span class="comment">// [1, 6, 7, 4]</span></span><br><span class="line">list1.setRange(<span class="number">1</span>, <span class="number">3</span>, list2, <span class="number">4</span>);</span><br><span class="line"><span class="built_in">print</span>(list1); <span class="comment">// Too few elements</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// skip</span></span><br><span class="line"><span class="built_in">List</span> ls1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">var</span> iterable = ls1.skip(<span class="number">2</span>);</span><br><span class="line"><span class="keyword">var</span> iterable1 = ls1.skip(<span class="number">2</span>).toList();</span><br><span class="line"><span class="built_in">print</span>(iterable); <span class="comment">// (3, 4)</span></span><br><span class="line"><span class="built_in">print</span>(iterable1); <span class="comment">// [3, 4]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// sort</span></span><br><span class="line"><span class="built_in">List</span>&lt;<span class="built_in">num</span>&gt; ls2 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="built_in">List</span>&lt;<span class="built_in">num</span>&gt; ls3 = [<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>];</span><br><span class="line">ls2.sort((a, b) =&gt; b - a);</span><br><span class="line">ls3.sort((a, b) =&gt; a - b);</span><br><span class="line"><span class="built_in">print</span>(ls2); <span class="comment">// [4, 3, 2, 1]</span></span><br><span class="line"><span class="built_in">print</span>(ls3); <span class="comment">// [5, 6, 7]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// takeWhile</span></span><br><span class="line"><span class="built_in">List</span>&lt;<span class="built_in">int</span>&gt; list2 = [<span class="number">6</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>];</span><br><span class="line"><span class="keyword">var</span> res1 = list2.takeWhile((el) =&gt; el &gt; <span class="number">5</span>); </span><br><span class="line"><span class="keyword">var</span> res2 = list2.takeWhile((el) =&gt; el &gt; <span class="number">4</span>);</span><br><span class="line"><span class="keyword">var</span> res1 = list2.takeWhile((el) =&gt; el &gt; <span class="number">6</span>); </span><br><span class="line"><span class="built_in">print</span>(res1); <span class="comment">// (6)</span></span><br><span class="line"><span class="built_in">print</span>(res2); <span class="comment">// (6, 5, 7, 8, 9)</span></span><br><span class="line"><span class="built_in">print</span>(res3); <span class="comment">// ()</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// whereType</span></span><br><span class="line"><span class="built_in">List</span> list2 = [<span class="number">6</span>, <span class="string">'5'</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>];</span><br><span class="line"><span class="keyword">var</span> res = list2.whereType&lt;<span class="built_in">String</span>&gt;();</span><br><span class="line"><span class="built_in">print</span>(res); <span class="comment">// (5)</span></span><br></pre></td></tr></table></figure>
+<h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><p>函数定义</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 函数通常定义方式</span></span><br><span class="line">func_name() &#123;</span><br><span class="line">  <span class="comment">// func_body</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// void 表示函数没有任何返回值</span></span><br><span class="line"><span class="keyword">void</span> func_name() &#123;</span><br><span class="line">  <span class="comment">// func_body</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>函数调用</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> main() &#123;</span><br><span class="line">  func()</span><br><span class="line">&#125;</span><br><span class="line">func() &#123;</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">'function'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>函数返回值</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">return_type func_name() &#123;</span><br><span class="line">  <span class="keyword">return</span> value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>return_type 为有效的数据类型</li>
+<li>return 可选，未指定为 null</li>
+<li>函数实际返回值，必须与指定的 return_type 相一致</li>
+<li>单个函数只有一个返回值</li>
+</ul>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> main() &#123;</span><br><span class="line">  <span class="built_in">print</span>(func());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">String</span> func() &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">'abc'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>函数可选参数，命名参数，默认参数</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> main() &#123;</span><br><span class="line"> func1(<span class="number">123</span>);</span><br><span class="line"> func2(<span class="number">123</span>);</span><br><span class="line"> func2(<span class="number">123</span>,s1:<span class="string">'abc'</span>);</span><br><span class="line"> func2(<span class="number">123</span>,s2:<span class="string">'abc'</span>,s1:<span class="string">'def'</span>);</span><br><span class="line"> func3(<span class="number">123</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> func1(n1,[s1]) &#123;</span><br><span class="line"> <span class="built_in">print</span>(n1);</span><br><span class="line"> <span class="built_in">print</span>(s1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> func2(n1,&#123;s1,s2&#125;) &#123;</span><br><span class="line"> <span class="built_in">print</span>(n1);</span><br><span class="line"> <span class="built_in">print</span>(s1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> func3(n1,&#123;s1:<span class="number">12</span>&#125;) &#123;</span><br><span class="line">   <span class="built_in">print</span>(n1);</span><br><span class="line">   <span class="built_in">print</span>(s1);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">123</span></span><br><span class="line"><span class="comment">null</span></span><br><span class="line"><span class="comment">123</span></span><br><span class="line"><span class="comment">null</span></span><br><span class="line"><span class="comment">123</span></span><br><span class="line"><span class="comment">abc</span></span><br><span class="line"><span class="comment">123</span></span><br><span class="line"><span class="comment">def</span></span><br><span class="line"><span class="comment">123</span></span><br><span class="line"><span class="comment">12</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<h4 id="字典（对象）"><a href="#字典（对象）" class="headerlink" title="字典（对象）"></a>字典（对象）</h4><h6 id="属性-3"><a href="#属性-3" class="headerlink" title="属性"></a>属性</h6><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>keys</td>
+<td>获取所有键名可遍历对象</td>
+</tr>
+<tr>
+<td>values</td>
+<td>获取所有键值可遍历对象</td>
+</tr>
+<tr>
+<td>length</td>
+<td>获取键值对数量</td>
+</tr>
+<tr>
+<td>isEmpty</td>
+<td>判断是否为空对象</td>
+</tr>
+<tr>
+<td>isNotEmpty</td>
+<td>判断是否为非空对象</td>
+</tr>
+</tbody>
+</table>
+<h6 id="方法-3"><a href="#方法-3" class="headerlink" title="方法"></a>方法</h6><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>addAll()</td>
+<td>末尾添加键值对</td>
+</tr>
+<tr>
+<td>clear()</td>
+<td>清空对象</td>
+</tr>
+<tr>
+<td>containsKey(Object key) → bool</td>
+<td>判断对象中是否包含某个键名</td>
+</tr>
+<tr>
+<td>containsValue(Object value) → bool</td>
+<td>判断对象中是否包含某个键值</td>
+</tr>
+<tr>
+<td>forEach((k, v) =&gt; …)</td>
+<td>循环调用内部键值对方法</td>
+</tr>
+<tr>
+<td>remove(key)</td>
+<td>删除指定键值对，返回值为指定键值对应的值</td>
+</tr>
+<tr>
+<td>removeWhere((dynamic, dynamic) → bool predicate) → void</td>
+<td>删除满足条件的键值对</td>
+</tr>
+<tr>
+<td>toString()</td>
+<td>转换为字符串</td>
 </tr>
 </tbody>
 </table>
@@ -495,8 +955,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/25/cesium-notes/" rel="next" title="cesium_notes">
-                <i class="fa fa-chevron-left"></i> cesium_notes
+              <a href="/2019/04/25/flutter-notes/" rel="next" title="flutter_notes">
+                <i class="fa fa-chevron-left"></i> flutter_notes
               </a>
             
           </div>
@@ -505,8 +965,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/04/25/flutter-notes/" rel="prev" title="flutter_notes">
-                flutter_notes <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/25/fabric-demo/" rel="prev" title="fabric_demo">
+                fabric_demo <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -584,7 +1044,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -597,7 +1057,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -630,7 +1090,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#多种数据类型变量定义与内置方法"><span class="nav-number">1.</span> <span class="nav-text">多种数据类型变量定义与内置方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量定义"><span class="nav-number">1.0.1.</span> <span class="nav-text">变量定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#操作符"><span class="nav-number">1.0.2.</span> <span class="nav-text">操作符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串属性与操作方法"><span class="nav-number">1.0.3.</span> <span class="nav-text">字符串属性与操作方法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#属性"><span class="nav-number">1.0.3.0.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#方法"><span class="nav-number">1.0.3.0.2.</span> <span class="nav-text">方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数值属性与操作方法"><span class="nav-number">1.0.4.</span> <span class="nav-text">数值属性与操作方法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#属性-1"><span class="nav-number">1.0.4.0.1.</span> <span class="nav-text">属性</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量定义与扩展"><span class="nav-number">1.</span> <span class="nav-text">变量定义与扩展</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量申明"><span class="nav-number">2.</span> <span class="nav-text">变量申明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#操作符"><span class="nav-number">3.</span> <span class="nav-text">操作符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串属性与操作方法"><span class="nav-number">4.</span> <span class="nav-text">字符串属性与操作方法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#属性"><span class="nav-number">4.0.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#方法"><span class="nav-number">4.0.2.</span> <span class="nav-text">方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数字属性与操作方法"><span class="nav-number">5.</span> <span class="nav-text">数字属性与操作方法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#属性-1"><span class="nav-number">5.0.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#方法-1"><span class="nav-number">5.0.2.</span> <span class="nav-text">方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#列表属性与操作方法"><span class="nav-number">6.</span> <span class="nav-text">列表属性与操作方法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#属性-2"><span class="nav-number">6.0.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#方法-2"><span class="nav-number">6.0.2.</span> <span class="nav-text">方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数"><span class="nav-number">7.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字典（对象）"><span class="nav-number">8.</span> <span class="nav-text">字典（对象）</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#属性-3"><span class="nav-number">8.0.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#方法-3"><span class="nav-number">8.0.2.</span> <span class="nav-text">方法</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

@@ -248,7 +248,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/25/flutter-notes/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/25/notes/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Domino-D">
@@ -267,7 +267,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/04/25/flutter-notes/" itemprop="url">flutter_notes</a></h1>
+                <a class="post-title-link" href="/2019/04/25/notes/" itemprop="url">notes</a></h1>
         
 
         <div class="post-meta">
@@ -319,121 +319,238 @@
       
         
           
-            <h4 id="flutter-from-today-mark-2019-1-24"><a href="#flutter-from-today-mark-2019-1-24" class="headerlink" title="flutter from today. mark - 2019/1/24"></a>flutter from today. mark - 2019/1/24</h4><h4 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h4><blockquote>
+            <p>antd</p>
+<blockquote>
 <ul>
-<li>MaterialApp</li>
-<li>Scaffold</li>
-<li>Text</li>
+<li><p>Modal对话框中，默认设置宽度最大为650px，且增加了！important最高权重。</p>
+<p>Modal提供了 <strong>wrapClassName</strong> 属性，可以命名对话框外层容器的类名。通过在css文件中如下修改层叠阀盖默认最大宽度650px。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;   <span class="selector-class">.wrapClassName</span> <span class="selector-class">.ant-modal</span> &#123;</span><br><span class="line">&gt;       width: 1000px;</span><br><span class="line">&gt;   &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">import</span> <span class="string">'package:flutter/material.dart'</span>;</span><br><span class="line">&gt; </span><br><span class="line">&gt; <span class="keyword">void</span> main() =&gt; runApp(MyApp());</span><br><span class="line">&gt; </span><br><span class="line">&gt; <span class="keyword">var</span> name = <span class="string">'k'</span>;</span><br><span class="line">&gt; </span><br><span class="line">&gt; <span class="class"><span class="keyword">class</span> <span class="title">MyApp</span> <span class="keyword">extends</span> <span class="title">StatelessWidget</span> </span>&#123;</span><br><span class="line">&gt;  	<span class="meta">@override</span></span><br><span class="line">&gt;  	Widget build(BuildContext context) &#123;</span><br><span class="line">&gt;    		<span class="keyword">return</span> <span class="keyword">new</span> MaterialApp(</span><br><span class="line">&gt;      		title: <span class="string">"title"</span>,</span><br><span class="line">&gt;      		theme: ThemeData.light(), <span class="comment">//背景主题色</span></span><br><span class="line">&gt;      		debugShowCheckedModeBanner: <span class="keyword">false</span>, <span class="comment">//消除界面右上角debug标签</span></span><br><span class="line">&gt;      		home: <span class="keyword">new</span> Scaffold(</span><br><span class="line">&gt;        		body: <span class="keyword">new</span> Text(</span><br><span class="line">&gt;          		<span class="string">"data $name"</span>, <span class="comment">//变量引用，以$开头：$variablity</span></span><br><span class="line">&gt;          		textAlign: TextAlign.center,</span><br><span class="line">&gt;          		overflow: TextOverflow.clip, <span class="comment">//clip:折叠; ellipsis:省略号; fade:淡出</span></span><br><span class="line">&gt;          		textScaleFactor: <span class="number">3</span>, <span class="comment">//放大比率</span></span><br><span class="line">&gt;          		style: TextStyle(</span><br><span class="line">&gt;            		fontWeight: FontWeight.bold,</span><br><span class="line">&gt;            		fontFamily: <span class="string">"arial"</span>,</span><br><span class="line">&gt;            		height: <span class="number">2</span>, <span class="comment">//行高</span></span><br><span class="line">&gt;            		decoration: TextDecoration.underline, <span class="comment">//文本装饰类型</span></span><br><span class="line">&gt;            		decorationColor: Colors.red, <span class="comment">//文本装饰颜色</span></span><br><span class="line">&gt;            		decorationStyle: TextDecorationStyle.dashed, <span class="comment">//文本装饰样式</span></span><br><span class="line">&gt;          		),</span><br><span class="line">&gt;        		),</span><br><span class="line">&gt;      		),</span><br><span class="line">&gt;    		);</span><br><span class="line">&gt;  	&#125;</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<h4 id="Basic-widgets"><a href="#Basic-widgets" class="headerlink" title="Basic widgets"></a>Basic widgets</h4><blockquote>
-<p>Container</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt; (<span class="keyword">new</span>) Container(&#123;</span><br><span class="line">&gt; 	Key key,</span><br><span class="line">&gt; 	AlignmentGeometry alignment,<span class="comment">//浮动对齐</span></span><br><span class="line">&gt; 	EdgeInsetsGeometry padding,<span class="comment">//内边距</span></span><br><span class="line">&gt; 	Color color,<span class="comment">//背景色</span></span><br><span class="line">&gt; 	Decoration decoration,<span class="comment">//child后的样式</span></span><br><span class="line">&gt; 	Decoration foregroundDecoration,<span class="comment">//child前的样式</span></span><br><span class="line">&gt; 	<span class="built_in">double</span> width,</span><br><span class="line">&gt; 	<span class="built_in">double</span> height,</span><br><span class="line">&gt; 	BoxConstraints constraints,</span><br><span class="line">&gt; 	EdgeInsetsGeometry margin,<span class="comment">//外边距</span></span><br><span class="line">&gt; 	Matrix4 transform,<span class="comment">//旋转</span></span><br><span class="line">&gt; 	Widget child<span class="comment">//子类</span></span><br><span class="line">&gt; &#125;) → Container</span><br><span class="line">&gt; </span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
-<p>Row</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt; (<span class="keyword">new</span>) Row(&#123;</span><br><span class="line">&gt; Key key,</span><br><span class="line">&gt; MainAxisAlignment mainAxisAlignment: MainAxisAlignment.start,<span class="comment">//横向对齐方式</span></span><br><span class="line">&gt; MainAxisSize mainAxisSize: MainAxisSize.max,<span class="comment">//横向轴最大尺寸</span></span><br><span class="line">&gt; CrossAxisAlignment crossAxisAlignment: CrossAxisAlignment.center,<span class="comment">//竖直位置</span></span><br><span class="line">&gt; TextDirection textDirection,<span class="comment">//文字方向</span></span><br><span class="line">&gt; VerticalDirection verticalDirection: VerticalDirection.down,<span class="comment">//竖直方向</span></span><br><span class="line">&gt; TextBaseline textBaseline,<span class="comment">//文字基准线</span></span><br><span class="line">&gt; <span class="built_in">List</span>&lt;Widget&gt; children: <span class="keyword">const</span> &lt;Widget&gt; []<span class="comment">//子类（数组）</span></span><br><span class="line">&gt; &#125;) → Row</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>全局提示 message.config 配置</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;   message.config(&#123;</span><br><span class="line">&gt;       top: <span class="number">100</span>, <span class="comment">//@param number || string 距离顶部位置，单位px</span></span><br><span class="line">&gt;       duraion: <span class="number">2</span>, <span class="comment">//显示持续时间，单位秒</span></span><br><span class="line">&gt;       maxCount: <span class="number">1</span> <span class="comment">//最多显示条数，超过就立即隐藏多出的最早的一条</span></span><br><span class="line">&gt;   &#125;)</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<p>copy-to-clipboard</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//yarn add copy-to-clipboard</span></span><br><span class="line">copy(variation)</span><br></pre></td></tr></table></figure>
+<p>vmax</p>
+<blockquote>
+<ul>
+<li><p>相对于可视窗口的宽度或高度中较大的那个。类比于 vh， vw</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;   <span class="selector-tag">p</span> &#123;</span><br><span class="line">&gt;       font-size: 8vmax;</span><br><span class="line">&gt;   &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<p>font &amp; Font Format</p>
+<blockquote>
+<ul>
+<li><p>woff2 不适用于IE、IE mobile、UC for Android</p>
+</li>
+<li><p>woff 最新客户端全兼容</p>
+</li>
+<li><p>svg 适用于Safari、iOS Safari</p>
+</li>
+<li><p>eot 仅仅适用于IE</p>
+</li>
+<li><p>ttf / otf 不适用于IE</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;   <span class="comment">/*引用外部字体文件，写入css命名，定义模板输出*/</span></span><br><span class="line">&gt;   @<span class="keyword">font-face</span> &#123;</span><br><span class="line">&gt;       font-family: 'Font name string'; /*定义字体名称*/</span><br><span class="line">&gt;       src: url('fonts/hanshand-webfont.eot');</span><br><span class="line">&gt;       src: url('fonts/hanshand-webfont.eot') format('embedded-opentype'),</span><br><span class="line">&gt;            url('fonts/hanshand-webfont.woff') format('woff'),</span><br><span class="line">&gt;            url('fonts/hanshand-webfont.ttf') format('truetype'),</span><br><span class="line">&gt;            url('fonts/hanshand-webfont.svg') format('svg');</span><br><span class="line">&gt;       <span class="selector-tag">font-weight</span>: <span class="selector-tag">normal</span>;</span><br><span class="line">&gt;       <span class="selector-tag">font-style</span>: <span class="selector-tag">normal</span>;</span><br><span class="line">&gt;   &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<p>overflow</p>
+<blockquote>
+<ul>
+<li>css 中 overflow 属性。在多层嵌套的布局环境下，内部元素（常见的是modal弹出框之类的元素），会超出屏幕边界，原本不显示的滚动条会被迫出现，为了撑开页面显示超出边界的元素。</li>
+<li>此时，overflow 属性需要配合 position:relative; 一起使用。</li>
+</ul>
+</blockquote>
+<p>react router &lt;params / query / state&gt;</p>
+<blockquote>
+<ul>
+<li><p>params 传参方式会直接体现在地址栏中，只允许传递字符串。</p>
+</li>
+<li><p>query方式和state方式一致，可传递对象数据，传递数据不会体现在地址栏中。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;   <span class="keyword">let</span> queryData = &#123;</span><br><span class="line">&gt;       pathname: <span class="string">'/tonextpage'</span>,</span><br><span class="line">&gt;       query: &lt;...&gt;</span><br><span class="line">&gt;   &#125;</span><br><span class="line">&gt;   let stateData = &#123;</span><br><span class="line">&gt;       pathname: '/tonextpage',</span><br><span class="line">&gt;       state: &lt;...&gt;</span><br><span class="line">&gt;   &#125;</span><br><span class="line">&gt;   </span><br><span class="line">&gt;   &lt;Link to=&#123;queryData&#125;&gt;&lt;/link&gt;</span><br><span class="line">&gt;   &lt;Link to=&#123;stateData&#125;&gt;&lt;/link&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<p>exif-js</p>
+<blockquote>
+<ul>
+<li><p>读取图像元数据</p>
+</li>
+<li><p>yarn add exif-js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;   <span class="keyword">import</span> Exif <span class="keyword">from</span> <span class="string">'exif-js'</span></span><br><span class="line">&gt;   </span><br><span class="line">&gt;   Exif.getData(fileObj, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">&gt;       <span class="keyword">const</span> allTags = Exif.getAllTags(<span class="keyword">this</span>)</span><br><span class="line">&gt;   &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<p>antd-upload-customRequest</p>
+<blockquote>
+<ul>
+<li><p>customRequest 方法不支持 async 函数</p>
+<p>复现报错：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;   Uncaught <span class="built_in">TypeError</span>: reqs[uid].abort is not a <span class="function"><span class="keyword">function</span></span></span><br><span class="line"><span class="function">&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<p>react function transfer between father and son component</p>
+<blockquote>
+<ul>
+<li><p>function transfer</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;   <span class="comment">// in father component</span></span><br><span class="line">&gt;   getName() &#123;</span><br><span class="line">&gt;       ...</span><br><span class="line">&gt;   &#125;</span><br><span class="line">&gt;   ...</span><br><span class="line">&gt;   &lt;Son getName=&#123;this.getName.bind(this)&#125;/&gt;</span><br><span class="line">&gt;   </span><br><span class="line">&gt;   //to run geName function in son component</span><br><span class="line">&gt;   this.props.getName()</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<p>css z-index   invalid</p>
+<blockquote>
+<ul>
+<li>父标签设置了position:relative</li>
+<li>当前标签未设置position:absolute</li>
+<li>当前标签设置了float属性</li>
+</ul>
+</blockquote>
+<p>css z-index   valid</p>
+<blockquote>
+<ul>
+<li>当前标签设置position:absolute / relative</li>
+</ul>
+</blockquote>
+<p>React - setState(prevState =&gt; {})</p>
+<blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="comment">//...</span></span><br><span class="line">&gt; <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">&gt;     <span class="keyword">super</span>(props)</span><br><span class="line">&gt;     <span class="keyword">this</span>.state = &#123;</span><br><span class="line">&gt;         num: <span class="number">1</span>,</span><br><span class="line">&gt;     &#125;</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt; <span class="comment">//...</span></span><br><span class="line">&gt; <span class="keyword">this</span>.setState(<span class="function"><span class="params">prevState</span> =&gt;</span> &#123;</span><br><span class="line">&gt;     num: prevState.num + <span class="number">1</span>, <span class="comment">//通过调用 prevState 形参，获取上一个状态组件中的 state 值</span></span><br><span class="line">&gt; &#125;)</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>git stash</p>
+<blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span> //暂存挂起到工作区，回到当前分支最近一次提交状态</span><br><span class="line"><span class="meta">&gt;</span> git stash</span><br><span class="line"><span class="meta">&gt;</span> </span><br><span class="line"><span class="meta">&gt;</span> //显示暂存列表</span><br><span class="line"><span class="meta">&gt;</span> git stash list</span><br><span class="line"><span class="meta">&gt;</span> </span><br><span class="line"><span class="meta">&gt;</span> //回到挂起前状态，应用到所在分支，并同时删除暂存列表</span><br><span class="line"><span class="meta">&gt;</span> //回归到挂起前状态与所在分支无关</span><br><span class="line"><span class="meta">&gt;</span> git stash pop</span><br><span class="line"><span class="meta">&gt;</span> </span><br><span class="line"><span class="meta">&gt;</span> //删除暂存列表中某一项</span><br><span class="line"><span class="meta">&gt;</span> git stash drop stash@&#123;0&#125;</span><br><span class="line"><span class="meta">&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>CSS calc()</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="selector-class">.example</span>&#123;</span><br><span class="line">&gt;   //尺寸计算，支持 加减乘除</span><br><span class="line">&gt;   <span class="selector-tag">width</span>: <span class="selector-tag">calc</span>(100% <span class="selector-tag">-</span> 20<span class="selector-tag">px</span>);</span><br><span class="line">&gt;   height: calc(100% = 1em);</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>React component ref attribute</p>
+<blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="comment">// 调用 dom 方法1</span></span><br><span class="line">&gt; ...</span><br><span class="line">&gt; <span class="keyword">let</span> targetDom = <span class="keyword">this</span>.refs.target</span><br><span class="line">&gt; ...</span><br><span class="line">&gt; &lt;Children ref="target"/&gt;</span><br><span class="line">&gt; </span><br><span class="line">&gt; // 调用 dom 方法2</span><br><span class="line">&gt; ...</span><br><span class="line">&gt; let targetDom = this.target</span><br><span class="line">&gt; ...</span><br><span class="line">&gt; &lt;Children ref=&#123;c =&gt; this.target = c&#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>Use functions of children component in parent component</p>
+<blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="comment">// Parent.js</span></span><br><span class="line">&gt; ...</span><br><span class="line">&gt; getChildComponent(ref) &#123;</span><br><span class="line">&gt;   <span class="keyword">this</span>.child = ref <span class="comment">// 获取子组件class，这里的ref即是子组件</span></span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt; ...</span><br><span class="line">&gt; <span class="keyword">this</span>.child.getSomething()<span class="comment">// 调用子组件函数方法</span></span><br><span class="line">&gt; ...</span><br><span class="line">&gt; &lt;Child foo=&#123;this.foo.bind(this)&#125;/&gt;</span><br><span class="line">&gt; </span><br><span class="line">&gt; </span><br><span class="line">&gt; // Child.js</span><br><span class="line">&gt; ...</span><br><span class="line">&gt; componentDidMount() &#123;</span><br><span class="line">&gt;   this.props.getChildComponent(this) // 这里的 this 指向子组件</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt; </span><br><span class="line">&gt; getSomething() &#123;</span><br><span class="line">&gt;   console.log('Got it')</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt; ...</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>reduce()</p>
+<blockquote>
+<p><code>reduce(callback(accumulator, currentValue, currentIndex, array))</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">let</span> arr = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">&gt; arr.reduce(</span><br><span class="line">&gt;   <span class="function">(<span class="params">accumulator, currentValue, currentIndex, array</span>) =&gt;</span> accumulator + currentValue</span><br><span class="line">&gt; )</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
-<p>Column</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt; (<span class="keyword">new</span>) Column(&#123;</span><br><span class="line">&gt; Key key,</span><br><span class="line">&gt; MainAxisAlignment mainAxisAlignment: MainAxisAlignment.start,<span class="comment">//横向对齐方式</span></span><br><span class="line">&gt; MainAxisSize mainAxisSize: MainAxisSize.max,<span class="comment">//横向轴最大尺寸</span></span><br><span class="line">&gt; CrossAxisAlignment crossAxisAlignment: CrossAxisAlignment.center,<span class="comment">//竖直位置</span></span><br><span class="line">&gt; TextDirection textDirection,<span class="comment">//文字方向</span></span><br><span class="line">&gt; VerticalDirection verticalDirection: VerticalDirection.down,<span class="comment">//竖直方向</span></span><br><span class="line">&gt; TextBaseline textBaseline,<span class="comment">//文字基准线</span></span><br><span class="line">&gt; <span class="built_in">List</span>&lt;Widget&gt; children: <span class="keyword">const</span> &lt;Widget&gt; []<span class="comment">//子类（数组）</span></span><br><span class="line">&gt; &#125;) → Column</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<p>回调状态变更历程</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><code>callback</code></th>
+<th style="text-align:center"><code>accumulator</code></th>
+<th style="text-align:left"><code>currentValue</code></th>
+<th style="text-align:left"><code>currentIndex</code></th>
+<th style="text-align:left"><code>array</code></th>
+<th style="text-align:left"><code>return value</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">first call</td>
+<td style="text-align:center"><code>0</code></td>
+<td style="text-align:left"><code>1</code></td>
+<td style="text-align:left"><code>1</code></td>
+<td style="text-align:left"><code>[0, 1, 2, 3, 4]</code></td>
+<td style="text-align:left"><code>1</code></td>
+</tr>
+<tr>
+<td style="text-align:left">second call</td>
+<td style="text-align:center"><code>1</code></td>
+<td style="text-align:left"><code>2</code></td>
+<td style="text-align:left"><code>2</code></td>
+<td style="text-align:left"><code>[0, 1, 2, 3, 4]</code></td>
+<td style="text-align:left"><code>3</code></td>
+</tr>
+<tr>
+<td style="text-align:left">third call</td>
+<td style="text-align:center"><code>3</code></td>
+<td style="text-align:left"><code>3</code></td>
+<td style="text-align:left"><code>3</code></td>
+<td style="text-align:left"><code>[0, 1, 2, 3, 4]</code></td>
+<td style="text-align:left"><code>6</code></td>
+</tr>
+<tr>
+<td style="text-align:left">fourth call</td>
+<td style="text-align:center"><code>6</code></td>
+<td style="text-align:left"><code>4</code></td>
+<td style="text-align:left"><code>4</code></td>
+<td style="text-align:left"><code>[0, 1, 2, 3, 4]</code></td>
+<td style="text-align:left"><code>10</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>reduce(callback(accumulator, currentValue, currentIndex, array), initialValue)</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">let</span> arr = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">&gt; arr.reduce(</span><br><span class="line">&gt;   <span class="function">(<span class="params">accumulator, currentValue, currentIndex, array</span>) =&gt;</span> accumulator + currentValue,</span><br><span class="line">&gt;   <span class="number">10</span></span><br><span class="line">&gt; )</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
-<p>Image</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt; Image.asset <span class="comment">//加载资源图片，就是加载项目资源目录中的图片,加入图片后会增大打包的包体体积，用的是相对路径</span></span><br><span class="line">&gt; Image.network <span class="comment">//网络资源图片，意思就是你需要加入一段http://xxxx.xxx的这样的网络路径地址</span></span><br><span class="line">&gt; Image.file <span class="comment">//加载本地图片，就是加载本地文件中的图片，这个是一个绝对路径，跟包体无关【不常用】</span></span><br><span class="line">&gt; Image.memory <span class="comment">//加载Uint8List资源图片【不常用】</span></span><br><span class="line">&gt; </span><br><span class="line">&gt; <span class="comment">//——————————————————————</span></span><br><span class="line">&gt; <span class="comment">//attribute</span></span><br><span class="line">&gt; image: AssetImage(<span class="built_in">String</span> assetName, &#123;AssetBundle bundle, <span class="built_in">String</span> package&#125;) → AssetImage</span><br><span class="line">&gt; </span><br><span class="line">&gt; image: NetworkImage(<span class="built_in">String</span> url, &#123;<span class="built_in">double</span> scale: <span class="number">1.0</span>, <span class="built_in">Map</span>&lt;<span class="built_in">String</span>, <span class="built_in">String</span>&gt; headers&#125;) → NetworkImage</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>Text</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt; Text(<span class="built_in">String</span> data,&#123; <span class="comment">//文字字符串</span></span><br><span class="line">&gt; Key key,</span><br><span class="line">&gt; TextStyle style, <span class="comment">//文字样式</span></span><br><span class="line">&gt; StrutStyle strutStyle,</span><br><span class="line">&gt; TextAlign textAlign, <span class="comment">//对齐方式</span></span><br><span class="line">&gt; TextDirection textDirection, <span class="comment">//文字装饰</span></span><br><span class="line">&gt; Locale locale,</span><br><span class="line">&gt; <span class="built_in">bool</span> softWrap,</span><br><span class="line">&gt; TextOverflow overflow, <span class="comment">//溢出显示</span></span><br><span class="line">&gt; <span class="built_in">double</span> textScaleFactor, <span class="comment">//缩放比例</span></span><br><span class="line">&gt; <span class="built_in">int</span> maxLines, <span class="comment">//最大行数</span></span><br><span class="line">&gt; <span class="built_in">String</span> semanticsLabel</span><br><span class="line">&gt; &#125;) → Text</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>Icon</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&gt; Icon(IconData icon, &#123; </span><br><span class="line">&gt; Key key,</span><br><span class="line">&gt; <span class="built_in">double</span> size, <span class="comment">//尺寸，默认24px</span></span><br><span class="line">&gt; Color color, <span class="comment">//主题色</span></span><br><span class="line">&gt; <span class="built_in">String</span> semanticLabel, <span class="comment">//语义标签，供残障用户使用</span></span><br><span class="line">&gt; TextDirection textDirection <span class="comment">//渲染图标方向，需要IconData.matchTextDirection字段为true</span></span><br><span class="line">&gt; &#125;) → Icon</span><br><span class="line">&gt; </span><br><span class="line">&gt; <span class="comment">//extensions</span></span><br><span class="line">&gt; IconButton(&#123;</span><br><span class="line">&gt; Key key,</span><br><span class="line">&gt; <span class="built_in">double</span> iconSize: <span class="number">24.0</span>,</span><br><span class="line">&gt; EdgeInsetsGeometry padding: <span class="keyword">const</span> EdgeInsets.all(<span class="number">8.0</span>),</span><br><span class="line">&gt; AlignmentGeometry alignment: Alignment.center,</span><br><span class="line">&gt; Widget icon,</span><br><span class="line">&gt; Color color,</span><br><span class="line">&gt; Color highlightColor, <span class="comment">//按钮处于向下（按下）状态时按钮的辅助颜色</span></span><br><span class="line">&gt; Color splashColor, <span class="comment">//按钮处于向下（按下）状态时按钮的主要颜色</span></span><br><span class="line">&gt; Color disabledColor,</span><br><span class="line">&gt; () → <span class="keyword">void</span> onPressed, <span class="comment">//点击回调函数</span></span><br><span class="line">&gt; <span class="built_in">String</span> tooltip <span class="comment">//辅助文字说明标签</span></span><br><span class="line">&gt; &#125;) → IconButton</span><br><span class="line">&gt; </span><br><span class="line">&gt; Icons <span class="comment">//引用flutter内置图标</span></span><br><span class="line">&gt; </span><br><span class="line">&gt; IconTheme(&#123;</span><br><span class="line">&gt; Key key,</span><br><span class="line">&gt; IconThemeData data,<span class="comment">//IconThemeData(&#123;Color color, double opacity, double size&#125;) → IconThemeData</span></span><br><span class="line">&gt; Widget child <span class="comment">//Icon和ImageIcon应用IconThemeData中定义的主题属性</span></span><br><span class="line">&gt; &#125;) → IconTheme</span><br><span class="line">&gt; </span><br><span class="line">&gt; ImageIcon(ImageProvider&lt;<span class="keyword">dynamic</span>&gt; image,&#123;</span><br><span class="line">&gt; Key key,</span><br><span class="line">&gt; <span class="built_in">double</span> size,</span><br><span class="line">&gt; Color color,</span><br><span class="line">&gt; <span class="built_in">String</span> semanticLabel</span><br><span class="line">&gt; &#125;) → ImageIcon</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>FlatButton 背景透明按钮</p>
-<p>FloatingActionButton 浮动按钮</p>
-<p>IconButton 图标按钮</p>
-<p>PopupMenuButton 下拉菜单按钮</p>
-<p>RaisedButton</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&gt; (<span class="keyword">new</span>) RaisedButton(&#123;</span><br><span class="line">&gt; Key key,</span><br><span class="line">&gt; () → <span class="keyword">void</span> onPressed,</span><br><span class="line">&gt; (<span class="built_in">bool</span>) → <span class="keyword">void</span> onHighlightChanged,</span><br><span class="line">&gt; ButtonTextTheme textTheme,</span><br><span class="line">&gt; Color textColor,</span><br><span class="line">&gt; Color disabledTextColor,</span><br><span class="line">&gt; Color color,</span><br><span class="line">&gt; Color disabledColor,</span><br><span class="line">&gt; Color highlightColor, <span class="comment">//按钮处于向下（按下）状态时按钮的辅助颜色</span></span><br><span class="line">&gt; Color splashColor, <span class="comment">//按钮处于向下（按下）状态时按钮的主要颜色</span></span><br><span class="line">&gt; Brightness colorBrightness,</span><br><span class="line">&gt; <span class="built_in">double</span> elevation,</span><br><span class="line">&gt; <span class="built_in">double</span> highlightElevation,</span><br><span class="line">&gt; <span class="built_in">double</span> disabledElevation,</span><br><span class="line">&gt; EdgeInsetsGeometry padding,</span><br><span class="line">&gt; ShapeBorder shape,</span><br><span class="line">&gt; Clip clipBehavior: Clip.none,</span><br><span class="line">&gt; MaterialTapTargetSize materialTapTargetSize,</span><br><span class="line">&gt; <span class="built_in">Duration</span> animationDuration,</span><br><span class="line">&gt; Widget child</span><br><span class="line">&gt; &#125;) → RaisedButton</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>AppBar</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&gt; (<span class="keyword">new</span>) AppBar(&#123;</span><br><span class="line">&gt;   Key key,</span><br><span class="line">&gt;   Widget leading, <span class="comment">//标题上方widget</span></span><br><span class="line">&gt;   <span class="built_in">bool</span> automaticallyImplyLeading: <span class="keyword">true</span>,</span><br><span class="line">&gt;   Widget title,</span><br><span class="line">&gt;   <span class="built_in">List</span>&lt;Widget&gt; actions, <span class="comment">//标题下方功能按钮组</span></span><br><span class="line">&gt;   Widget flexibleSpace,</span><br><span class="line">&gt;   PreferredSizeWidget bottom,</span><br><span class="line">&gt;   <span class="built_in">double</span> elevation,</span><br><span class="line">&gt;   Color backgroundColor,</span><br><span class="line">&gt;   Brightness brightness,<span class="comment">//亮度</span></span><br><span class="line">&gt;   IconThemeData iconTheme,</span><br><span class="line">&gt;   TextTheme textTheme,</span><br><span class="line">&gt;   <span class="built_in">bool</span> primary: <span class="keyword">true</span>,</span><br><span class="line">&gt;   <span class="built_in">bool</span> centerTitle, <span class="comment">//标题是否居中</span></span><br><span class="line">&gt;   <span class="built_in">double</span> titleSpacing: NavigationToolbar.kMiddleSpacing,</span><br><span class="line">&gt;   <span class="built_in">double</span> toolbarOpacity: <span class="number">1.0</span>, <span class="comment">//工具栏透明度</span></span><br><span class="line">&gt;   <span class="built_in">double</span> bottomOpacity: <span class="number">1.0</span> <span class="comment">//底部透明度</span></span><br><span class="line">&gt; &#125;) → AppBar</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<h4 id="Theme"><a href="#Theme" class="headerlink" title="Theme"></a>Theme</h4><blockquote>
-<p>ThemeData</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">&gt; (<span class="keyword">new</span>) ThemeData(&#123;</span><br><span class="line">&gt;   Brightness brightness,</span><br><span class="line">&gt;   MaterialColor primarySwatch,</span><br><span class="line">&gt;   Color primaryColor,</span><br><span class="line">&gt;   Brightness primaryColorBrightness,</span><br><span class="line">&gt;   Color primaryColorLight,</span><br><span class="line">&gt;   Color primaryColorDark,</span><br><span class="line">&gt;   Color accentColor,</span><br><span class="line">&gt;   Brightness accentColorBrightness,</span><br><span class="line">&gt;   Color canvasColor,</span><br><span class="line">&gt;   Color scaffoldBackgroundColor,</span><br><span class="line">&gt;   Color bottomAppBarColor,</span><br><span class="line">&gt;   Color cardColor,</span><br><span class="line">&gt;   Color dividerColor,</span><br><span class="line">&gt;   Color highlightColor,</span><br><span class="line">&gt;   Color splashColor,</span><br><span class="line">&gt;   InteractiveInkFeatureFactory splashFactory,</span><br><span class="line">&gt;   Color selectedRowColor,</span><br><span class="line">&gt;   Color unselectedWidgetColor,</span><br><span class="line">&gt;   Color disabledColor,</span><br><span class="line">&gt;   Color buttonColor,</span><br><span class="line">&gt;   ButtonThemeData buttonTheme,</span><br><span class="line">&gt;   Color secondaryHeaderColor,</span><br><span class="line">&gt;   Color textSelectionColor,</span><br><span class="line">&gt;   Color cursorColor,</span><br><span class="line">&gt;   Color textSelectionHandleColor,</span><br><span class="line">&gt;   Color backgroundColor,</span><br><span class="line">&gt;   Color dialogBackgroundColor,</span><br><span class="line">&gt;   Color indicatorColor,</span><br><span class="line">&gt;   Color hintColor,</span><br><span class="line">&gt;   Color errorColor,</span><br><span class="line">&gt;   Color toggleableActiveColor,</span><br><span class="line">&gt;   <span class="built_in">String</span> fontFamily,</span><br><span class="line">&gt;   TextTheme textTheme,</span><br><span class="line">&gt;   TextTheme primaryTextTheme,</span><br><span class="line">&gt;   TextTheme accentTextTheme,</span><br><span class="line">&gt;   InputDecorationTheme inputDecorationTheme,</span><br><span class="line">&gt;   IconThemeData iconTheme,</span><br><span class="line">&gt;   IconThemeData primaryIconTheme,</span><br><span class="line">&gt;   IconThemeData accentIconTheme,</span><br><span class="line">&gt;   SliderThemeData sliderTheme,</span><br><span class="line">&gt;   TabBarTheme tabBarTheme,</span><br><span class="line">&gt;   CardTheme cardTheme,</span><br><span class="line">&gt;   ChipThemeData chipTheme,</span><br><span class="line">&gt;   TargetPlatform platform,</span><br><span class="line">&gt;   MaterialTapTargetSize materialTapTargetSize,</span><br><span class="line">&gt;   PageTransitionsTheme pageTransitionsTheme,</span><br><span class="line">&gt;   AppBarTheme appBarTheme,</span><br><span class="line">&gt;   BottomAppBarTheme bottomAppBarTheme,</span><br><span class="line">&gt;   ColorScheme colorScheme,</span><br><span class="line">&gt;   DialogTheme dialogTheme,</span><br><span class="line">&gt;   Typography typography,</span><br><span class="line">&gt;   CupertinoThemeData cupertinoOverrideTheme</span><br><span class="line">&gt; &#125;) → ThemeData</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<h4 id="Layout"><a href="#Layout" class="headerlink" title="Layout"></a>Layout</h4><blockquote>
-<h5 id="Basic-layout"><a href="#Basic-layout" class="headerlink" title="Basic layout"></a>Basic layout</h5><p>Container </p>
-<figure class="highlight dart"><figcaption><span>as above</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="comment">//as above</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>Padding</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; Padding(&#123;Key key, EdgeInsetsGeometry padding, Widget child&#125;) → Padding</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>Center</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; Center(&#123;Key key, <span class="built_in">double</span> widthFactor, <span class="built_in">double</span> heightFactor, Widget child&#125;) → Center</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>Align</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; Align(&#123;Key key, AlignmentGeometry alignment: Alignment.center, <span class="built_in">double</span> widthFactor, <span class="built_in">double</span> heightFactor, Widget child&#125;) → Align</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>FittedBox 内部元素大小随动变化</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; FittedBox(&#123;Key key, BoxFit fit: BoxFit.contain, AlignmentGeometry alignment: Alignment.center, Widget child&#125;) → FittedBox</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>AspectRatio   定长宽比widget</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; AspectRatio(&#123;Key key, <span class="built_in">double</span> aspectRatio, Widget child&#125;) → AspectRatio</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>ConstrainedBox 约束内部元素widget</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; ConstrainedBox(&#123;Key key, BoxConstraints constraints, Widget child&#125;) → ConstrainedBox</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>IntrinsicHeight 子元素撑满高度</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; IntrinsicHeight(&#123;Key key, Widget child&#125;) → IntrinsicHeight</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>IntrinsicWidth  子元素撑满宽度</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; IntrinsicWidth(&#123;Key key, <span class="built_in">double</span> stepWidth, <span class="built_in">double</span> stepHeight, Widget child&#125;) → IntrinsicWidth</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<h5 id="Complex-layout"><a href="#Complex-layout" class="headerlink" title="Complex layout"></a>Complex layout</h5><p>Row</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="comment">//as above</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>Column</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="comment">//as above</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>Stack 允许堆叠</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; Stack(&#123;Key key, AlignmentGeometry alignment: AlignmentDirectional.topStart, TextDirection textDirection, StackFit fit: StackFit.loose, Overflow overflow: Overflow.clip, <span class="built_in">List</span>&lt;Widget&gt; children: <span class="keyword">const</span> &lt;Widget&gt; []&#125;) → Stack</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>Flow </p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; Flow(&#123;Key key, FlowDelegate delegate, <span class="built_in">List</span>&lt;Widget&gt; children: <span class="keyword">const</span> &lt;Widget&gt; []&#125;) → Flow</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>Table</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; Table(&#123;Key key, <span class="built_in">List</span>&lt;TableRow&gt; children: <span class="keyword">const</span> &lt;TableRow&gt; [], <span class="built_in">Map</span>&lt;<span class="built_in">int</span>, TableColumnWidth&gt; columnWidths, TableColumnWidth defaultColumnWidth: <span class="keyword">const</span> FlexColumnWidth(<span class="number">1.0</span>), TextDirection textDirection, TableBorder border, TableCellVerticalAlignment defaultVerticalAlignment: TableCellVerticalAlignment.top, TextBaseline textBaseline&#125;) → Table</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>Wrap</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; Wrap(&#123;Key key, Axis direction: Axis.horizontal, WrapAlignment alignment: WrapAlignment.start, <span class="built_in">double</span> spacing: <span class="number">0.0</span>, WrapAlignment runAlignment: WrapAlignment.start, <span class="built_in">double</span> runSpacing: <span class="number">0.0</span>, WrapCrossAlignment crossAxisAlignment: WrapCrossAlignment.start, TextDirection textDirection, VerticalDirection verticalDirection: VerticalDirection.down, <span class="built_in">List</span>&lt;Widget&gt; children: <span class="keyword">const</span> &lt;Widget&gt; []&#125;) → Wrap</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>ListBody</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; ListBody(&#123;Key key, Axis mainAxis: Axis.vertical, <span class="built_in">bool</span> reverse: <span class="keyword">false</span>, <span class="built_in">List</span>&lt;Widget&gt; children: <span class="keyword">const</span> &lt;Widget&gt; []&#125;) → ListBody</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>ListView</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; ListView(&#123;Key key, Axis scrollDirection: Axis.vertical, <span class="built_in">bool</span> reverse: <span class="keyword">false</span>, ScrollController controller, <span class="built_in">bool</span> primary, ScrollPhysics physics, <span class="built_in">bool</span> shrinkWrap: <span class="keyword">false</span>, EdgeInsetsGeometry padding, <span class="built_in">double</span> itemExtent, <span class="built_in">bool</span> addAutomaticKeepAlives: <span class="keyword">true</span>, <span class="built_in">bool</span> addRepaintBoundaries: <span class="keyword">true</span>, <span class="built_in">bool</span> addSemanticIndexes: <span class="keyword">true</span>, <span class="built_in">double</span> cacheExtent, <span class="built_in">List</span>&lt;Widget&gt; children: <span class="keyword">const</span> &lt;Widget&gt; [], <span class="built_in">int</span> semanticChildCount, DragStartBehavior dragStartBehavior: DragStartBehavior.down&#125;) → ListView</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<p>回调状态变更历程</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><code>callback</code></th>
+<th style="text-align:left"><code>accumulator</code></th>
+<th style="text-align:left"><code>currentValue</code></th>
+<th style="text-align:center"><code>currentIndex</code></th>
+<th style="text-align:left"><code>array</code></th>
+<th style="text-align:left">return value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">first call</td>
+<td style="text-align:left"><code>10</code></td>
+<td style="text-align:left"><code>0</code></td>
+<td style="text-align:center"><code>0</code></td>
+<td style="text-align:left"><code>[0, 1, 2, 3, 4]</code></td>
+<td style="text-align:left"><code>10</code></td>
+</tr>
+<tr>
+<td style="text-align:left">second call</td>
+<td style="text-align:left"><code>10</code></td>
+<td style="text-align:left"><code>1</code></td>
+<td style="text-align:center"><code>1</code></td>
+<td style="text-align:left"><code>[0, 1, 2, 3, 4]</code></td>
+<td style="text-align:left"><code>11</code></td>
+</tr>
+<tr>
+<td style="text-align:left">third call</td>
+<td style="text-align:left"><code>11</code></td>
+<td style="text-align:left"><code>2</code></td>
+<td style="text-align:center"><code>2</code></td>
+<td style="text-align:left"><code>[0, 1, 2, 3, 4]</code></td>
+<td style="text-align:left"><code>13</code></td>
+</tr>
+<tr>
+<td style="text-align:left">fourth call</td>
+<td style="text-align:left"><code>13</code></td>
+<td style="text-align:left"><code>3</code></td>
+<td style="text-align:center"><code>3</code></td>
+<td style="text-align:left"><code>[0, 1, 2, 3, 4]</code></td>
+<td style="text-align:left"><code>16</code></td>
+</tr>
+<tr>
+<td style="text-align:left">fifth call</td>
+<td style="text-align:left"><code>16</code></td>
+<td style="text-align:left"><code>4</code></td>
+<td style="text-align:center"><code>4</code></td>
+<td style="text-align:left"><code>[0, 1, 2, 3, 4]</code></td>
+<td style="text-align:left"><code>20</code></td>
+</tr>
+</tbody>
+</table>
 </blockquote>
 
           
@@ -474,7 +591,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/13/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/15/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/13/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/15/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -520,7 +637,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -533,7 +650,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
